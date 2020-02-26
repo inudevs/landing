@@ -1,8 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 const Global = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Montserrat:600,700&display=swap');
-
   * {
     box-sizing: border-box;
   }
