@@ -2,12 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Global from './components/atoms/Global';
+import HorizontalRule from './components/atoms/HorizontalRule';
 import Link from './components/atoms/Link';
 import Page from './components/atoms/Page';
 import Text from './components/atoms/Text';
 import LayeredText from './components/molecules/LayeredText';
 import ProfileImage from './components/molecules/ProfileImage';
 import SocialBar from './components/molecules/SocialBar';
+import PageSection from './components/organisms/PageSection';
 
 function App() {
   return (
@@ -47,6 +49,19 @@ function App() {
             </Info>
           </TextSection>
         </Container>
+        <HorizontalRule />
+        <PageSection
+          title="이누를 소개할게요."
+        />
+        <PageSection
+          title="동아리를 이루는 사람들이에요."
+        />
+        <PageSection
+          title="컨텐츠로 나눔을 실천하고 있어요."
+        />
+        <PageSection
+          title="재미있는 프로젝트를 진행해요."
+        />
       </Page>
     </>
   );
