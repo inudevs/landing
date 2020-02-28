@@ -3,15 +3,18 @@ import styled from 'styled-components';
 
 import Global from './components/atoms/Global';
 import Link from './components/atoms/Link';
+import Page from './components/atoms/Page';
 import Text from './components/atoms/Text';
 import LayeredText from './components/molecules/LayeredText';
 import ProfileImage from './components/molecules/ProfileImage';
+import SocialBar from './components/molecules/SocialBar';
 
 function App() {
   return (
     <>
       <Global />
       <Page>
+        <SocialBar />
         <Container>
           <ProfileImage />
           <TextSection>
@@ -50,14 +53,6 @@ function App() {
 }
 
 export default App;
-
-const Page = styled.div`
-  background-color: #F9F9F9;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
 
 const Container = styled.div`
   display: flex;

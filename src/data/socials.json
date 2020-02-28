@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://github.com",
+    "color": "rgba(51, 51, 51, 0.35)",
+    "icon": "fab fa-github-square",
+    "html": "<strong>깃허브</strong>, 공유를 통해 새로운 역사를"
+  },
+  {
+    "url": "https://facebook.com",
+    "color": "rgba(66, 103, 178, 0.35)",
+    "icon": "fab fa-facebook-square",
+    "html": "<strong>페이스북</strong>, 세상을 더 아름답게 만드는 컨텐츠"
+  },
+  {
+    "url": "https://instagram.com",
+    "color": "rgba(241, 0, 118, 0.35)",
+    "icon": "fab fa-instagram-square",
+    "html": "<strong>인스타그램</strong>, 더 많은 사람들과 더 많은 것을 나누려"
+  }
+]
