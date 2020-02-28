@@ -85,4 +85,5 @@ const SocialIcon = styled.i`
 
 const SocialText = styled(Text)`
   font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
 `;
