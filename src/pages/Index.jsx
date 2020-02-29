@@ -9,6 +9,7 @@ import LayeredText from '../components/molecules/LayeredText';
 import ProfileImage from '../components/molecules/ProfileImage';
 import SocialBar from '../components/molecules/SocialBar';
 import PageSection from '../components/organisms/PageSection';
+import MemberList from '../components/templates/MemberList';
 
 const Index = () => {
   return (
@@ -52,7 +53,9 @@ const Index = () => {
       />
       <PageSection
         title="동아리를 이루는 사람들이에요."
-      />
+      >
+        <MemberList />
+      </PageSection>
       <PageSection
         title="컨텐츠로 나눔을 실천하고 있어요."
       />

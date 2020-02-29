@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-const Page = styled.div`
+const Page = styled.main`
   background-color: #F9F9F9;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 8rem 0;
 `;
 
 export default Page;
