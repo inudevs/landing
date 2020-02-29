@@ -1,51 +1,52 @@
-import React, { Component } from 'react';
-// import styled from 'styled-components';
+import React from 'react';
+import styled from 'styled-components';
 
 import MemberCard from '../organisms/MemberCard';
 
 import members from '../../data/members.json';
 
 
-//
-import Slider from 'react-slick';
-import "./Slider1.css";
-import "./Slider2.css";
-
+// react-slick
+// import Slider from 'react-slick';
+// import "./Slider1.css";
+// import "./Slider2.css";
 //
 
 const sortedMembers = members.sort((a, b) => (a.name > b.name) ? 1 : -1);
 
-// const MemberList = () => {
-//   return (
-//     <>
-//       <ListContainer>
-//         {sortedMembers.map(({ name, ...props }, idx) => {
-//           return (
-//             <MemberCard
-//               key={`member-${idx}`}
-//               image={require(`../../assets/members/${name}.png`)}
-//               name={name}
-//               {...props}
-//             />
-//           );
-//         })}
-//       </ListContainer>
-//     </>
-//   );
-// };
+const MemberList = () => {
+  return (
+    <>
+      <ListContainer>
+        {sortedMembers.map(({ name, ...props }, idx) => {
+          return (
+            <MemberCard
+              key={`member-${idx}`}
+              image={require(`../../assets/members/${name}.png`)}
+              name={name}
+              {...props}
+            />
+          );
+        })}
+      </ListContainer>
+    </>
+  );
+};
 
 
 
-
+//react-sick ver.
+/*
 export default class SimpleSlider extends Component {
   render() {
     const settings = {
-      dots: false,
+      dots: true,
       infinite: true,
-      slidesToShow: 3.5,
+      slidesToShow: 4,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 2000
+      autoplaySpeed: 2000,
+      pauseOnHover: false
     };
     return (
       <Slider {...settings}>
@@ -63,15 +64,17 @@ export default class SimpleSlider extends Component {
     );
   }
 }
+*/
 
 
 
+const ListContainer = styled.div`
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+`;
 
-// const ListContainer = styled.div`
-//   margin-top: 1rem;
-//   margin-bottom: 2rem;
-//   display: grid;
-//   grid-column-gap: 1rem;
-//   grid-row-gap: 1rem;
-//   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-// `;
+export default MemberList;
