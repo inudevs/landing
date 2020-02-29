@@ -12,7 +12,7 @@ import members from '../../data/members.json';
 // import "./Slider2.css";
 //
 
-const sortedMembers = members.sort((a, b) => (a.name > b.name) ? 1 : -1);
+const sortedMembers = members.sort((a, b) => a - b);
 
 const MemberList = () => {
   return (

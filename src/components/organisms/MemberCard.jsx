@@ -7,21 +7,17 @@ import Text from '../atoms/Text';
 
 const MemberCard = ({ image, name, quote }) => {
   return (
-    <Wrapper>
-      <Container>
-        <Align>
-          <Image
-            src={image}
-          />
-          <Name>
-            {name}
-          </Name><br />
-          <Quote>
-            {quote}
-          </Quote>
-        </Align>
-      </Container>
-    </Wrapper>
+    <Container>
+      <Image
+        src={image}
+      />
+      <Name>
+        {name}
+      </Name><br />
+      <Quote>
+        {quote}
+      </Quote>
+    </Container>
   );
 };
 
@@ -30,7 +26,7 @@ export default MemberCard;
 const Container = styled.div`
   background-color: white;
   width: fit-content;
-  padding: 1.2rem;
+  padding: 1.2rem 1.2rem 1.5rem 1.2rem;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
@@ -48,22 +44,14 @@ const Container = styled.div`
 `;
 
 
-const Wrapper = styled.div`
-text-align:center;
-`;
-
-
-const Align = styled.div`
-text-align:left
-`;
 
 
 const Image = styled.img`
-  width: 10rem;
+  width: 11rem;
   height: 12rem;
   object-fit: cover;
   border-radius: 4px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   box-shadow:
     5px 5px 15px rgba(0, 0, 0, 0.28),
     -3px -3px 15px #ffffff;
