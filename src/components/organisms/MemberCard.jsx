@@ -31,15 +31,27 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   box-shadow:
-    inset 3px 3px 3px rgba(163, 177, 198, 0.7),
+    inset 4px 4px 4px rgba(163, 177, 198, 0.7),
     inset -3px -3px 4px rgba(255, 255, 255, 0.5),
     9px 9px 16px rgb(163,177,198,0.25),
     -9px -9px 16px white;
   border: 5px solid #f2f4f7;
   border-radius: 8px;
 
+  transition: all 0.7s;
 
-  display:inline-block;
+  &:hover{
+  box-shadow:
+    inset 0px 0px 0px rgba(163, 177, 198, 0.7),
+    inset 0px 0px 0px rgba(255, 255, 255, 0.5),
+    3px 3px 6px rgba(163, 177, 198, 0.7),
+    9px 9px 25px rgb(163,177,198,0.5),
+    -9px -9px 16px white;
+
+    
+
+    transition: all 0.7s;
+  }
   
 `;
 
