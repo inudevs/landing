@@ -2,19 +2,26 @@ import React from 'react';
 import styled from 'styled-components';
 import Text from '../atoms/Text';
 
+
+
+
 const MemberCard = ({ image, name, quote }) => {
   return (
-    <Container>
-      <Image
-        src={image}
-      />
-      <Name>
-        {name}
-      </Name>
-      <Quote>
-        {quote}
-      </Quote>
-    </Container>
+    <Wrapper>
+      <Container>
+        <Align>
+          <Image
+            src={image}
+          />
+          <Name>
+            {name}
+          </Name><br />
+          <Quote>
+            {quote}
+          </Quote>
+        </Align>
+      </Container>
+    </Wrapper>
   );
 };
 
@@ -34,7 +41,22 @@ const Container = styled.div`
     -9px -9px 16px white;
   border: 5px solid #f2f4f7;
   border-radius: 8px;
+
+
+  display:inline-block;
+  
 `;
+
+
+const Wrapper = styled.div`
+text-align:center;
+`;
+
+
+const Align = styled.div`
+text-align:left
+`;
+
 
 const Image = styled.img`
   width: 10rem;
