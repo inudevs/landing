@@ -24,6 +24,7 @@ const MemberCard = ({ image, name, quote }) => {
 export default MemberCard;
 
 const Container = styled.div`
+  animation: cardAnimation 3.3s;
   background-color: white;
   width: fit-content;
   padding: 1.2rem 1.2rem 1.5rem 1.2rem;
@@ -48,6 +49,16 @@ const Container = styled.div`
     -9px -9px 16px white;
     transition: all 0.7s;
   }
+
+    @keyframes cardAnimation {
+    from { 
+      opacity: 0%; 
+      margin-top:15px;}
+    to { 
+      opacity:100%; 
+      margin-top:0px;
+      }
+}
 `;
 
 

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const HorizontalRule = styled.div`
 
-  animation: scale1 2s;
+  animation: widthanimation 2s;
   height: 10px;
   width: 85%;
   max-width: 1145px;
@@ -13,7 +13,7 @@ const HorizontalRule = styled.div`
   border-radius: 5px;
   margin: 2.5rem 0;
 
-  @keyframes scale1 {
+  @keyframes widthanimation {
     from { width: 0%; }
     to { width:85%; }
 }
