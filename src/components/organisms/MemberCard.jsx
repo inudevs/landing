@@ -37,7 +37,6 @@ const Container = styled.div`
     -9px -9px 16px white;
   border: 5px solid #f2f4f7;
   border-radius: 8px;
-
   transition: all 0.7s;
 
   &:hover{
@@ -47,12 +46,8 @@ const Container = styled.div`
     3px 3px 6px rgba(163, 177, 198, 0.7),
     9px 9px 25px rgb(163,177,198,0.5),
     -9px -9px 16px white;
-
-    
-
     transition: all 0.7s;
   }
-  
 `;
 
 
@@ -74,7 +69,7 @@ const Name = styled(Text)`
   font-weight: 800;
   font-size: 1.5rem;
   text-shadow:
-    5px 5px 9px rgba(163, 177, 198, 0.65),
+    5px 5px 9px rgba(163, 177, 198, 0.45),
     -3px -3px 15px #ffffff;
 `;
 
@@ -82,7 +77,7 @@ const Quote = styled(Text)`
   color: #354461;
   font-size: 0.95rem;
   text-shadow:
-    5px 5px 9px rgba(163, 177, 198, 0.65),
+    5px 5px 9px rgba(163, 177, 198, 0.35),
     -3px -3px 15px #ffffff;
   line-height: 1.25;
 `;

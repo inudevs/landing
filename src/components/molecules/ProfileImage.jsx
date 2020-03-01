@@ -16,6 +16,7 @@ const ProfileImage = () => (
 export default ProfileImage;
 
 const ProfileBorder = styled.div`
+
   width: 15rem;
   height: 15rem;
   border-radius: 50%;
