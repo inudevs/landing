@@ -9,13 +9,13 @@ const Global = createGlobalStyle`
     margin: 0;
   }
 
+  button {
+    border: none;
+  }
+
   button:focus,
   input:focus {
     outline: none;
-  }
-
-  button {
-    border: none;
   }
 `;
 

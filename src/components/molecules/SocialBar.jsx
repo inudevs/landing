@@ -14,7 +14,7 @@ const SocialBar = () => {
       setCurrentTextHTML(
         [
           '<strong>소셜 미디어</strong>로 더 큰 꿈을',
-          ...socials.map(v => v.html),
+          ...socials.map((v) => v.html),
         ][currentIdx],
       );
     },
@@ -38,7 +38,9 @@ const SocialBar = () => {
             color={color}
             onClick={() => onClickIcon(url)}
             onMouseOut={onMouseOutIcon}
+            onBlur={onMouseOutIcon}
             onMouseOver={() => onMouseOverIcon(idx + 1)}
+            onFocus={() => onMouseOverIcon(idx + 1)}
           />
         ))}
       </SocialContainer>

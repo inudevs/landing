@@ -4,16 +4,14 @@ import styled from 'styled-components';
 import Section from '../atoms/Section';
 import LayeredText from '../molecules/LayeredText';
 
-const PageSection = ({ title, children }) => {
-  return (
-    <Section>
-      <SectionTitle>
-        {title}
-      </SectionTitle>
-      {children}
-    </Section>
-  );
-};
+const PageSection = ({ title, children }) => (
+  <Section>
+    <SectionTitle>
+      {title}
+    </SectionTitle>
+    {children}
+  </Section>
+);
 
 export default PageSection;
 

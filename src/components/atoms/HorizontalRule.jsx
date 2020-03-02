@@ -20,5 +20,4 @@ const HorizontalRule = styled.div`
 `;
 
 
-
 export default HorizontalRule;

@@ -14,28 +14,23 @@ import members from '../../data/members.json';
 
 const sortedMembers = members.sort((a, b) => a - b);
 
-const MemberList = () => {
-  return (
-    <>
-      <ListContainer>
-        {sortedMembers.map(({ name, ...props }, idx) => {
-          return (
-            <MemberCard
-              key={`member-${idx}`}
-              image={require(`../../assets/members/${name}.png`)}
-              name={name}
-              {...props}
-            />
-          );
-        })}
-      </ListContainer>
-    </>
-  );
-};
+const MemberList = () => (
+  <>
+    <ListContainer>
+      {sortedMembers.map(({ name, quote }, idx) => (
+        <MemberCard
+          key={`member-${idx}`}
+          image={require(`../../assets/members/${name}.png`)}
+          name={name}
+          quote={quote}
+        />
+      ))}
+    </ListContainer>
+  </>
+);
 
 
-
-//react-sick ver.
+// react-sick ver.
 /*
 export default class SimpleSlider extends Component {
   render() {
@@ -65,7 +60,6 @@ export default class SimpleSlider extends Component {
   }
 }
 */
-
 
 
 const ListContainer = styled.div`

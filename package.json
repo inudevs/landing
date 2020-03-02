@@ -4,21 +4,33 @@
   "private": true,
   "homepage": "https://inudevs.com/",
   "dependencies": {
-    "react": "^16.12.0",
+    "react": "^16.13.0",
     "react-circle-slider": "^1.6.2",
-    "react-dom": "^16.12.0",
+    "react-dom": "^16.13.0",
     "react-scripts": "3.4.0",
     "react-slick": "^0.25.2",
-    "styled-components": "^5.0.1"
+    "styled-components": "^5.0.1",
+    "stylelint": "^13.2.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0"
   },
   "devDependencies": {
+    "eslint": "6.8.0",
+    "eslint-config-airbnb": "18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.5.0",
     "gh-pages": "^2.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "deploy": "yarn run build && gh-pages -d build"
+    "deploy": "yarn run build && gh-pages -d build",
+    "lint:js": "eslint \"src/**/*.{js,jsx}\" --fix",
+    "lint:css": "stylelint \"src/**/*.{js,jsx}\" --fix"
   },
   "eslintConfig": {
     "extends": "react-app"

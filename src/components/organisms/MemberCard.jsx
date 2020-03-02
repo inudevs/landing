@@ -2,24 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import Text from '../atoms/Text';
 
-
-
-
-const MemberCard = ({ image, name, quote }) => {
-  return (
-    <Container>
-      <Image
-        src={image}
-      />
-      <Name>
-        {name}
-      </Name><br />
-      <Quote>
-        {quote}
-      </Quote>
-    </Container>
-  );
-};
+const MemberCard = ({ image, name, quote }) => (
+  <Container>
+    <Image
+      src={image}
+    />
+    <Name>
+      {name}
+    </Name>
+    <br />
+    <Quote>
+      {quote}
+    </Quote>
+  </Container>
+);
 
 export default MemberCard;
 
@@ -28,7 +24,6 @@ const Container = styled.div`
   background-color: white;
   width: fit-content;
   padding: 1.2rem 1.2rem 1.5rem 1.2rem;
-  border-radius: 4px;
   display: flex;
   flex-direction: column;
   box-shadow:
@@ -50,18 +45,17 @@ const Container = styled.div`
     transition: all 0.7s;
   }
 
-    @keyframes cardAnimation {
-    from { 
-      opacity: 0%; 
-      margin-top:15px;}
-    to { 
-      opacity:100%; 
+  @keyframes cardAnimation {
+    from {
+      opacity: 0%;
+      margin-top:15px;
+    }
+    to {
+      opacity:100%;
       margin-top:0px;
-      }
-}
+    }
+  }
 `;
-
-
 
 
 const Image = styled.img`

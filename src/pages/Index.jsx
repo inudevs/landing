@@ -12,61 +12,59 @@ import SocialBar from '../components/molecules/SocialBar';
 import PageSection from '../components/organisms/PageSection';
 import MemberList from '../components/templates/MemberList';
 
-const Index = () => {
-  return (
-    <Page>
-      <SocialBar />
-      <Container>
-        <ProfileImage />
-        <ProfileSlider />
-        <TextSection>
-          <Title>
-            inudevs
-            </Title>
-          <StatusBar>
-            <StatusText>
-              게시물 0
-              </StatusText>
-            <StatusText>
-              팔로워 ∞
-              </StatusText>
-            <StatusText>
-              팔로우 ∞
-              </StatusText>
-          </StatusBar>
-          <Info>
-            <Name>
-              이누
-              </Name>
-            <Description>
-              뭉뭉~ 안뇽 난 이누 !!
-              </Description>
-            <Link
-              href="https://facebook.com/inudevs"
-            >
-              fb.com/inudevs
-              </Link>
-          </Info>
-        </TextSection>
-      </Container>
-      <HorizontalRule />
-      <PageSection
-        title="이누를 소개할게요."
-      />
-      <PageSection
-        title="동아리를 이루는 사람들이에요."
-      >
-        <MemberList />
-      </PageSection>
-      <PageSection
-        title="컨텐츠로 나눔을 실천하고 있어요."
-      />
-      <PageSection
-        title="재미있는 프로젝트를 진행해요."
-      />
-    </Page>
-  );
-};
+const Index = () => (
+  <Page>
+    <SocialBar />
+    <Container>
+      <ProfileImage />
+      <ProfileSlider />
+      <TextSection>
+        <Title>
+          inudevs
+        </Title>
+        <StatusBar>
+          <StatusText>
+            게시물 0
+          </StatusText>
+          <StatusText>
+            팔로워 ∞
+          </StatusText>
+          <StatusText>
+            팔로우 ∞
+          </StatusText>
+        </StatusBar>
+        <Info>
+          <Name>
+            이누
+          </Name>
+          <Description>
+            뭉뭉~ 안뇽 난 이누 !!
+          </Description>
+          <Link
+            href="https://facebook.com/inudevs"
+          >
+            fb.com/inudevs
+          </Link>
+        </Info>
+      </TextSection>
+    </Container>
+    <HorizontalRule />
+    <PageSection
+      title="이누를 소개할게요."
+    />
+    <PageSection
+      title="동아리를 이루는 사람들이에요."
+    >
+      <MemberList />
+    </PageSection>
+    <PageSection
+      title="컨텐츠로 나눔을 실천하고 있어요."
+    />
+    <PageSection
+      title="재미있는 프로젝트를 진행해요."
+    />
+  </Page>
+);
 
 export default Index;
 
