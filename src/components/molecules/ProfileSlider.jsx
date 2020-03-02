@@ -78,8 +78,6 @@ class ProfileSlider extends React.Component {
 const Logoslider = styled.div`
     display:inline;
     position:absolute;
-    margin-top:2.5px;
-    margin-left:-4px;
 `;
 
 const ProfileBorder = styled.div`
