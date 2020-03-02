@@ -36,7 +36,7 @@ const ProfileBorder = styled.div`
   margin-right: 2rem;
 
   animation: gradientanimation 4s infinite alternate;
-  animation: profilerotate 2s;
+  animation: profilerotate 2.5s;
 
 @keyframes profilerotate {
   0%{transform: rotate(-360deg);}
@@ -69,7 +69,7 @@ const Profile = styled(Image)`
 `;
 
 const FadeIn = styled.div`
-  animation:fadeIn 2.3s ease;
+  animation:fadeIn 2.8s ease;
 
   @keyframes fadeIn {
     0% {

@@ -81,25 +81,25 @@ const Logoslider = styled.div`
     margin-left:-4px;
 `;
 
-const ProfileBorder = styled.div`
-  width: 15rem;
-  height: 15rem;
-  border-radius: 50%;
-  background-image: linear-gradient(222deg, #c32e92, #dc316f, #f99f4d 85%);
-  box-shadow:
-    25px 10px 50px 0 rgba(255, 0, 104, 0.25),
-    25px 25px 50px 0 rgba(255, 58, 0, 0.2),
-    -5px -5px 10px 0 #fff2fa;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  filter: saturate(120%);
-  margin-right: 2rem;
+// const ProfileBorder = styled.div`
+//   width: 15rem;
+//   height: 15rem;
+//   border-radius: 50%;
+//   background-image: linear-gradient(222deg, #c32e92, #dc316f, #f99f4d 85%);
+//   box-shadow:
+//     25px 10px 50px 0 rgba(255, 0, 104, 0.25),
+//     25px 25px 50px 0 rgba(255, 58, 0, 0.2),
+//     -5px -5px 10px 0 #fff2fa;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   filter: saturate(120%);
+//   margin-right: 2rem;
 
-  @media (max-width: 635px) {
-    margin-right: 0;
-  }
-`;
+//   @media (max-width: 635px) {
+//     margin-right: 0;
+//   }
+// `;
 
 const FadeOut = styled.div`
   animation:fadeOut 1.2s;

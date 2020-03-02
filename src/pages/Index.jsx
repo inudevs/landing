@@ -11,6 +11,7 @@ import ProfileSlider from '../components/molecules/ProfileSlider';
 import SocialBar from '../components/molecules/SocialBar';
 import PageSection from '../components/organisms/PageSection';
 import MemberList from '../components/templates/MemberList';
+import ProjectList from '../components/templates/ProjectList';
 
 const Index = () => {
   return (
@@ -60,7 +61,9 @@ const Index = () => {
       </PageSection>
       <PageSection
         title="컨텐츠로 나눔을 실천하고 있어요."
-      />
+      >
+        <ProjectList />
+      </PageSection>
       <PageSection
         title="재미있는 프로젝트를 진행해요."
       />
