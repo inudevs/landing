@@ -5,6 +5,7 @@
   "homepage": "https://inudevs.com/",
   "dependencies": {
     "react": "^16.12.0",
+    "react-circle-slider": "^1.6.2",
     "react-dom": "^16.12.0",
     "react-scripts": "3.4.0",
     "react-slick": "^0.25.2",

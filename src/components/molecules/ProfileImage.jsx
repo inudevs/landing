@@ -6,11 +6,13 @@ import Image from '../atoms/Image';
 import profileImage from '../../assets/profile.png';
 
 const ProfileImage = () => (
-  <ProfileBorder>
+  <FadeIn>
+    <ProfileBorder>
     <Profile
       src={profileImage}
     />
-  </ProfileBorder>
+    </ProfileBorder>
+  </FadeIn>
 );
 
 export default ProfileImage;
@@ -58,4 +60,21 @@ const Profile = styled(Image)`
   border-radius: 50%;
   box-shadow: 10px 10px 16px 0 rgba(254, 151, 52, 0.45);
   filter: saturate(105%);
+`;
+
+const FadeIn = styled.div `
+  animation:fadeIn 2.3s ease;
+
+  @keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    50% {
+      opacity :0;
+    }
+
+    100% {
+      opacity :1;
+    }
+  }
 `;
