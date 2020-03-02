@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 const HorizontalRule = styled.div`
-
-  animation: widthanimation 2s;
+  animation: widthAnimation 2s;
   height: 10px;
   width: 85%;
   max-width: 1145px;
@@ -13,11 +12,10 @@ const HorizontalRule = styled.div`
   border-radius: 5px;
   margin: 2.5rem 0;
 
-  @keyframes widthanimation {
+  @keyframes widthAnimation {
     from { width: 0%; }
-    to { width:85%; }
-}
+    to { width: 85%; }
+  }
 `;
-
 
 export default HorizontalRule;

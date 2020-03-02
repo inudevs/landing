@@ -2,33 +2,49 @@ import React from 'react';
 import styled from 'styled-components';
 import Text from '../atoms/Text';
 
-const MemberCard = ({ image, name, quote }) => (
-  <Container>
-    <Image
-      src={image}
-    />
-    <Name>
-      {name}
-    </Name>
+const ProjectCard = ({
+  image, name, quote, award,
+}) => (
+  <>
+    <Container>
+      <Image
+        src={image}
+      />
+      <Name>
+        {name}
+      </Name>
+      <Quote>
+        {quote}
+      </Quote>
+      <Award>
+        {
+          award
+            ? <span role="img" aria-label="trophy">&#x1F3C6;</span>
+            : <span>&nbsp;</span>
+        }
+        {' '}
+        {award}
+      </Award>
+    </Container>
     <br />
-    <Quote>
-      {quote}
-    </Quote>
-  </Container>
+  </>
 );
 
-export default MemberCard;
+export default ProjectCard;
 
 const Container = styled.div`
   animation: cardAnimation 1.8s;
   background-color: white;
-  width: fit-content;
-  padding: 1.2rem 1.2rem 1.5rem 1.2rem;
+  /* width: fit-content; */
+  width: 96%;
+  margin-left: 2%;
+  padding: 1.2rem;
+  padding-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
   box-shadow:
     inset 4px 4px 4px rgba(163, 177, 198, 0.7),
-    inset -3px -3px 4px rgba(255, 255, 255, 0.5),
+    inset -3px 0px 6px rgba(210, 210, 210, 0.5),
     9px 9px 16px rgb(163, 177, 198, 0.25),
     -9px -9px 16px white;
   border: 5px solid #f2f4f7;
@@ -58,8 +74,8 @@ const Container = styled.div`
 `;
 
 const Image = styled.img`
-  width: 11rem;
-  height: 12rem;
+  width: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: 4px;
   margin-bottom: 0.6rem;
@@ -79,9 +95,21 @@ const Name = styled(Text)`
 
 const Quote = styled(Text)`
   color: #354461;
-  font-size: 0.95rem;
+  font-size: 1rem;
+  text-shadow:
+    5px 5px 9px rgba(163, 177, 198, 0.35),
+    -3px -3px 15px #ffffff;
+  line-height: 1.2;
+  margin-top: 0.5rem;
+`;
+
+const Award = styled(Text)`
+  color: #354461;
+  font-size: 1rem;
+  font-weight: 600;
   text-shadow:
     5px 5px 9px rgba(163, 177, 198, 0.35),
     -3px -3px 15px #ffffff;
   line-height: 1.25;
+  margin-top: 1.5rem;
 `;
