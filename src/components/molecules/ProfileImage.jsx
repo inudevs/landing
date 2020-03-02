@@ -8,9 +8,9 @@ import profileImage from '../../assets/profile.png';
 const ProfileImage = () => (
   <FadeIn>
     <ProfileBorder>
-    <Profile
-      src={profileImage}
-    />
+      <Profile
+        src={profileImage}
+      />
     </ProfileBorder>
   </FadeIn>
 );
@@ -36,15 +36,21 @@ const ProfileBorder = styled.div`
   margin-right: 2rem;
 
   animation: gradientanimation 4s infinite alternate;
+  animation: profilerotate 2s;
+
+@keyframes profilerotate {
+  0%{transform: rotate(-360deg);}
+}
+
     @keyframes gradientanimation {
     0% { 
-      background-position: 0% 50%
+      background-position: 0% 50%;
     }
     50% { 
-      background-position: 100% 10%
+      background-position: 100% 10%;
     }
     100% { 
-      background-position: 0% 50%
+      background-position: 0% 50%;
     }
 }
 
@@ -62,7 +68,7 @@ const Profile = styled(Image)`
   filter: saturate(105%);
 `;
 
-const FadeIn = styled.div `
+const FadeIn = styled.div`
   animation:fadeIn 2.3s ease;
 
   @keyframes fadeIn {
