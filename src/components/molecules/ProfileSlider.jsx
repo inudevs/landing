@@ -79,6 +79,10 @@ const Logoslider = styled.div`
     position:absolute;
     margin-top:2.5px;
     margin-left:-4px;
+    @media all and (max-width:768px) {
+        margin-top:-4px;
+        margin-left: -0.3px;
+    }
 `;
 
 // const ProfileBorder = styled.div`
