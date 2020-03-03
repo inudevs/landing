@@ -65,7 +65,7 @@ const Profile = styled(Image)`
 `;
 
 const FadeIn = styled.div`
-  animation: fadeIn 2.8s ease;
+  animation: fadeIn 2.3s ease;
 
   @keyframes fadeIn {
     0% {
