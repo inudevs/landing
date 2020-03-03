@@ -15,7 +15,9 @@ const MemberCard = ({
         <Name>{name}</Name>
         <Position>{position}</Position>
         <Quote>
-          {quote.split('\n').map((line) => <span>{line}</span>)}
+          {quote.split('\n').map((line, idx) => (
+            <span key={`line-${idx}`}>{line}</span>
+          ))}
         </Quote>
         <Major>{major}</Major>
       </InfoBox>
