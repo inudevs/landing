@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import styled, { css } from 'styled-components';
 
-import Text from '../atoms/Text';
+import Text, { TextWithButton } from '../atoms/Text';
 
 import socials from '../../data/socials.json';
 
@@ -9,39 +9,54 @@ const SocialBar = () => {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [currentTextHTML, setCurrentTextHTML] = useState('');
 
+  const mappedSocialTextHTML = useMemo(
+    () => [
+      '<strong>소셜 미디어</strong>로 더 큰 꿈을',
+      ...socials.map((v) => v.html),
+    ],
+    [],
+  );
+
   useEffect(
-    () => {
-      setCurrentTextHTML(
-        [
-          '<strong>소셜 미디어</strong>로 더 큰 꿈을',
-          ...socials.map((v) => v.html),
-        ][currentIdx],
-      );
-    },
+    () => setCurrentTextHTML(
+      mappedSocialTextHTML[currentIdx],
+    ),
     [currentIdx],
   );
 
   const onMouseOverIcon = (idx) => setCurrentIdx(idx);
-  const onMouseOutIcon = () => setCurrentIdx(0);
+
+  const onMouseOutIcon = (event) => {
+    event.stopPropagation();
+    const element = event.target || event.srcElement;
+    if (element.id === 'dvRep') {
+      setCurrentIdx(0);
+    }
+  };
+
   const onClickIcon = (url) => {
     const win = window.open(`${url}/inudevs`, '_blank');
     win.focus();
   };
 
   return (
-    <Wrapper>
+    <Wrapper
+      onMouseOut={onMouseOutIcon}
+      onBlur={onMouseOutIcon}
+    >
       <SocialContainer>
         {socials.map(({ url, color, icon }, idx) => (
-          <SocialIcon
-            key={`social-${idx}`}
-            className={icon}
-            color={color}
+          <SocialButton
             onClick={() => onClickIcon(url)}
-            onMouseOut={onMouseOutIcon}
-            onBlur={onMouseOutIcon}
             onMouseOver={() => onMouseOverIcon(idx + 1)}
             onFocus={() => onMouseOverIcon(idx + 1)}
-          />
+            color={color}
+          >
+            <SocialIcon
+              key={`social-${idx}`}
+              className={icon}
+            />
+          </SocialButton>
         ))}
       </SocialContainer>
       <SocialText
@@ -64,28 +79,54 @@ const Wrapper = styled.div`
 
 const SocialContainer = styled.div`
   margin-bottom: 0.35rem;
+  display: flex;
+`;
+
+const SocialButton = styled(TextWithButton)`
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+  background: linear-gradient(to top left, #caced4, #f0f5fd);
+  box-shadow:
+    6px 6px 13px #bec3c9,
+    -6px -6px 13px #ffffff;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(to top left, #f0f5fd, #caced4);
+    box-shadow:
+      6px 6px 13px #bec3c9,
+      -6px -6px 13px #ffffff;
+
+    i {
+      ${({ color = 'black' }) => color && css`
+        color: ${color};
+        text-shadow: 1px 1px 24px ${color};
+      `};
+    }
+  }
 `;
 
 const SocialIcon = styled.i`
-  font-size: 2.5rem;
-  margin-left: 0.5rem;
-  cursor: pointer;
-  color: #fafafa;
-  text-shadow:
-    5px 5px 15px rgba(0, 0, 0, 0.2),
-    -8px -8px 8px #ffffff;
+  font-size: 1.1rem;
+  color: #4D5966;
   transition: all 0.2s ease-in-out;
-
-  &:hover {
-    ${({ color }) => color && css`
-      text-shadow:
-        2px 2px 16px ${color},
-        -5px -5px 5px #ffffff;
-    `};
-  }
 `;
 
 const SocialText = styled(Text)`
   font-size: 12px;
   color: rgba(0, 0, 0, 0.5);
+
+  strong {
+    ${({ color }) => color && css`
+      color: ${color};
+    `}
+  }
 `;

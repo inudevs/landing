@@ -26,7 +26,7 @@ const ProfileBorder = styled.div`
   box-shadow:
     25px 10px 50px 0 rgba(255, 0, 104, 0.25),
     25px 25px 50px 0 rgba(255, 58, 0, 0.2),
-    -5px -5px 10px 0 #fff2fa;
+    -8px -8px 16px 0 rgba(255, 242, 250, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;

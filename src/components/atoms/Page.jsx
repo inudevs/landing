@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Page = styled.main`
-  background-color: #F9F9F9;
+  background-color: #E0E5EC;
   display: flex;
   flex-direction: column;
   justify-content: center;

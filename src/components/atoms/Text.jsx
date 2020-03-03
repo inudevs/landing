@@ -12,3 +12,5 @@ const Text = styled.span`
 `;
 
 export default Text;
+
+export const TextWithButton = Text.withComponent('button');

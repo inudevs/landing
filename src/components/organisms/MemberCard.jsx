@@ -21,7 +21,7 @@ export default MemberCard;
 
 const Container = styled.div`
   animation: cardAnimation 1.8s;
-  background-color: white;
+  background-color: transparent;
   width: fit-content;
   padding: 1.2rem 1.2rem 1.5rem 1.2rem;
   display: flex;
