@@ -125,7 +125,7 @@ const Logoslider = styled.div`
 // `;
 
 const FadeOut = styled.div`
-  animation: fadeOut 2.2s;
+  animation: fadeOut 1.2s;
   opacity: 0;
 
   @keyframes fadeOut {
