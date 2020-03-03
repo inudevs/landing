@@ -21,7 +21,7 @@ const SocialBar = () => {
     () => setCurrentTextHTML(
       mappedSocialTextHTML[currentIdx],
     ),
-    [currentIdx],
+    [currentIdx, mappedSocialTextHTML],
   );
 
   const onMouseOverIcon = (idx) => setCurrentIdx(idx);
@@ -47,13 +47,13 @@ const SocialBar = () => {
       <SocialContainer>
         {socials.map(({ url, color, icon }, idx) => (
           <SocialButton
+            key={`social-${idx}`}
             onClick={() => onClickIcon(url)}
             onMouseOver={() => onMouseOverIcon(idx + 1)}
             onFocus={() => onMouseOverIcon(idx + 1)}
             color={color}
           >
             <SocialIcon
-              key={`social-${idx}`}
               className={icon}
             />
           </SocialButton>
