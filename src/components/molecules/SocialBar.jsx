@@ -21,7 +21,7 @@ const SocialBar = () => {
     () => setCurrentTextHTML(
       mappedSocialTextHTML[currentIdx],
     ),
-    [currentIdx],
+    [currentIdx, mappedSocialTextHTML],
   );
 
   const onMouseOverIcon = (idx) => setCurrentIdx(idx);

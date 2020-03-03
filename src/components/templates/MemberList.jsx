@@ -17,12 +17,12 @@ const sortedMembers = members.sort((a, b) => a - b);
 const MemberList = () => (
   <>
     <ListContainer>
-      {sortedMembers.map(({ name, quote }, idx) => (
+      {sortedMembers.map(({ name, ...props }, idx) => (
         <MemberCard
           key={`member-${idx}`}
           image={require(`../../assets/members/${name}.png`)}
           name={name}
-          quote={quote}
+          {...props}
         />
       ))}
     </ListContainer>
@@ -68,7 +68,7 @@ const ListContainer = styled.div`
   display: grid;
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
 `;
 
 export default MemberList;
