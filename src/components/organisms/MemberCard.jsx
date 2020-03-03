@@ -86,7 +86,7 @@ const ImageWrapper = styled.div`
 const Image = styled.img`
   object-fit: cover;
   width: 17.5rem;
-  height: 16rem;
+  height: 16.5rem;
 `;
 
 const Overlay = styled.div`
@@ -101,7 +101,7 @@ const Overlay = styled.div`
   background-image: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0) 40%,
-    #e8f3fd 72%
+    #e8f3fd 70%
   );
 `;
 
