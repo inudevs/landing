@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { CircleSlider } from 'react-circle-slider';
 import styled from 'styled-components';
 
@@ -12,26 +12,42 @@ const ProfileSlider = () => {
     setValue(val);
   };
 
-  const getSliderSpeed = () => {
-    if (isStart <= 50) {
-      return 0.7 + ((0.7 / 50) * isStart);
-    }
-    if ((isStart >= 50) && (isStart <= 100)) {
-      return 1.4 - ((0.7 / 75) * isStart);
-    }
-    return 0;
-  };
+  const getSliderSpeed = useCallback(
+    () => {
+      if (isStart <= 50) {
+        return 0.7 + ((0.7 / 50) * isStart);
+      }
+      if ((isStart >= 50) && (isStart <= 100)) {
+        return 1.4 - ((0.7 / 75) * isStart);
+      }
+      return 0;
+    },
+    [isStart],
+  );
 
-  const animate = (e) => {
-    setTimeout(() => {
-      setValue(isStart);
-      setIsStart(isStart + e);
-    }, 10);
+  const animate = useCallback(
+    () => {
+      const sliderSpeed = getSliderSpeed();
+      setTimeout(() => {
+        setValue(isStart);
+        setIsStart(isStart + sliderSpeed);
+      }, 10);
 
-    if (isStart >= 99) {
-      setIsEnd(1);
-    }
-  };
+      if (isStart >= 99) {
+        setIsEnd(1);
+      }
+    },
+    [getSliderSpeed, isStart],
+  );
+
+  useEffect(
+    () => {
+      if (isStart < 100) {
+        animate();
+      }
+    },
+    [isStart, animate, getSliderSpeed],
+  );
 
   return (
     <>
@@ -49,8 +65,6 @@ const ProfileSlider = () => {
                 progressWidth="24"
                 size="248"
               />
-              {isStart < 100
-                && <>{animate(getSliderSpeed())}</>}
             </Logoslider>
           )
           : (
