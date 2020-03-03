@@ -51,6 +51,12 @@ const Container = styled.div`
       margin-top: 0px;
     }
   }
+
+  &:hover {
+    box-shadow:
+      12px 12px 22px rgb(163, 177, 198, 0.8),
+      -9px -9px 16px rgba(255, 255, 255, 0.65);
+  }
 `;
 
 // const BlurredImage = styled.div`
@@ -86,7 +92,8 @@ const ImageWrapper = styled.div`
 const Image = styled.img`
   object-fit: cover;
   width: 17.5rem;
-  height: 16.5rem;
+  height: 18.5rem;
+  filter: saturate(105%);
 `;
 
 const Overlay = styled.div`
@@ -101,6 +108,7 @@ const Overlay = styled.div`
   background-image: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0) 40%,
+    rgba(232, 243, 253, 0.95) 66%,
     #e8f3fd 70%
   );
 `;
@@ -127,19 +135,19 @@ const Position = styled(Text)`
   text-shadow: 0 3px 12px rgba(255, 156, 0, 0.45);
   font-weight: bold;
   color: #ff9a00;
-  font-size: 0.95rem;
+  font-size: 0.98rem;
 `;
 
 const Quote = styled(Text)`
   color: #354461;
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   text-shadow: 0 3px 12px rgba(27, 42, 68, 0.5);
   line-height: 1.25;
   min-height: 36px;
   word-break: keep-all;
   display: flex;
   flex-direction: column;
-  margin-top: 0.25rem;
+  margin-top: 0.2rem;
 `;
 
 const Major = styled(Text)`
@@ -147,5 +155,5 @@ const Major = styled(Text)`
   font-weight: bold;
   text-shadow: 0 3px 12px rgba(27, 42, 68, 0.5);
   margin-top: 0.25rem;
-  font-size: 0.95rem;
+  font-size: 0.98rem;
 `;
