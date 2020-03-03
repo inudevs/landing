@@ -60,10 +60,10 @@ const ProfileSlider = () => {
                 onChange={handleChange}
                 gradientColorTo="#F99F4D"
                 gradientColorFrom="#C32E92"
-                knobRadius="0"
-                circleWidth="0"
-                progressWidth="24"
-                size="248"
+                knobRadius={0}
+                circleWidth={0}
+                progressWidth={24}
+                size={248}
               />
             </Logoslider>
           )
@@ -75,10 +75,10 @@ const ProfileSlider = () => {
                   onChange={handleChange}
                   gradientColorTo="#F99F4D"
                   gradientColorFrom="#C32E92"
-                  knobRadius="0"
-                  circleWidth="0"
-                  progressWidth="24"
-                  size="248"
+                  knobRadius={0}
+                  circleWidth={0}
+                  progressWidth={24}
+                  size={248}
                 />
               </FadeOut>
             </Logoslider>
