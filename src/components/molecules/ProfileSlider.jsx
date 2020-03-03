@@ -1,30 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { CircleSlider } from 'react-circle-slider';
 import styled from 'styled-components';
 
-class ProfileSlider extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: 0,
-      isStart: 0,
-      isEnd: 0,
-    };
-  }
+const ProfileSlider = () => {
+  const [value, setValue] = useState(0);
+  const [isStart, setIsStart] = useState(0);
+  const [isEnd, setIsEnd] = useState(0);
 
-  handleChange = (value) => {
-    console.log(`Changed value ${value}`);
-    this.setState({ value });
+  const handleChange = (val) => {
+    console.log(`Changed value ${val}`);
+    setValue(val);
   };
 
-  handleChangeRange = (event) => {
-    this.setState({
-      value: event.target.valueAsNumber,
-    });
-  };
-
-  Sliderspeed = () => {
-    const { isStart } = this.state;
+  const getSliderSpeed = () => {
     if (isStart <= 50) {
       return 0.7 + ((0.7 / 50) * isStart);
     }
@@ -32,35 +20,45 @@ class ProfileSlider extends React.Component {
       return 1.4 - ((0.7 / 75) * isStart);
     }
     return 0;
-  }
+  };
 
-  Anim(e) {
+  const animate = (e) => {
     setTimeout(() => {
-      this.setState((prevState) => ({
-        isStart: prevState.isStart + e,
-        value: prevState.isStart,
-      }));
+      setValue(isStart);
+      setIsStart(isStart + e);
     }, 10);
 
-    const { isStart } = this.state;
     if (isStart >= 99) {
-      this.setState({
-        isEnd: 1,
-      });
+      setIsEnd(1);
     }
-  }
+  };
 
-  render() {
-    const { value, isStart, isEnd } = this.state;
-    return (
-      <>
-        {
-          isEnd === 0
-            ? (
-              <Logoslider>
+  return (
+    <>
+      {
+        isEnd === 0
+          ? (
+            <Logoslider>
+              <CircleSlider
+                value={value}
+                onChange={handleChange}
+                gradientColorTo="#F99F4D"
+                gradientColorFrom="#C32E92"
+                knobRadius="0"
+                circleWidth="0"
+                progressWidth="24"
+                size="248"
+              />
+              {isStart < 100
+                && <>{animate(getSliderSpeed())}</>}
+            </Logoslider>
+          )
+          : (
+            <Logoslider>
+              <FadeOut>
                 <CircleSlider
-                  value={value}
-                  onChange={this.handleChange}
+                  value={100}
+                  onChange={handleChange}
                   gradientColorTo="#F99F4D"
                   gradientColorFrom="#C32E92"
                   knobRadius="0"
@@ -68,31 +66,13 @@ class ProfileSlider extends React.Component {
                   progressWidth="24"
                   size="248"
                 />
-                {isStart < 100
-                  && <>{this.Anim(this.Sliderspeed())}</>}
-              </Logoslider>
-            )
-            : (
-              <Logoslider>
-                <FadeOut>
-                  <CircleSlider
-                    value={100}
-                    onChange={this.handleChange}
-                    gradientColorTo="#F99F4D"
-                    gradientColorFrom="#C32E92"
-                    knobRadius="0"
-                    circleWidth="0"
-                    progressWidth="24"
-                    size="248"
-                  />
-                </FadeOut>
-              </Logoslider>
-            )
-        }
-      </>
-    );
-  }
-}
+              </FadeOut>
+            </Logoslider>
+          )
+      }
+    </>
+  );
+};
 
 const Logoslider = styled.div`
   display: inline;
