@@ -2,64 +2,46 @@ import React from 'react';
 import styled from 'styled-components';
 import Text from '../atoms/Text';
 
-const ProjectCard = ({
-  image, name, quote, award,
+const MemberCard = ({
+  image, name, quote,
+  award, major,
 }) => (
-  <>
     <Container>
-      <Image
-        src={image}
-      />
-      <Name>
-        {name}
-      </Name>
-      <Quote>
-        {quote}
-      </Quote>
-      <Award>
-        {
-          award
-            ? <span role="img" aria-label="trophy">&#x1F3C6;</span>
-            : <span>&nbsp;</span>
-        }
-        {' '}
-        {award}
-      </Award>
+      <ImageWrapper>
+        <Image src={image} />
+      </ImageWrapper>
+      <Overlay>
+        <InfoBox>
+          <Name>{name}</Name>
+          <Position>{award}</Position>
+          <Quote>
+            {quote.split('\n').map((line, idx) => (
+              <span key={`line-${idx}`}>{line}</span>
+            ))}
+          </Quote>
+          <Major>{major}</Major>
+        </InfoBox>
+      </Overlay>
     </Container>
-    <br />
-  </>
-);
+  );
 
-export default ProjectCard;
+export default MemberCard;
 
 const Container = styled.div`
   animation: cardAnimation 1.8s;
-  background-color: white;
-  /* width: fit-content; */
-  width: 96%;
-  margin-left: 2%;
-  padding: 1.2rem;
-  padding-bottom: 1.5rem;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   box-shadow:
-    inset 4px 4px 4px rgba(163, 177, 198, 0.7),
-    inset -3px 0px 6px rgba(210, 210, 210, 0.5),
-    9px 9px 16px rgb(163, 177, 198, 0.25),
-    -9px -9px 16px white;
-  border: 5px solid #f2f4f7;
-  border-radius: 8px;
+    9px 9px 16px rgb(163, 177, 198, 0.6),
+    -9px -9px 16px rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
   transition: all 0.7s;
-
-  &:hover {
-    box-shadow:
-      inset 0px 0px 0px rgba(163, 177, 198, 0.7),
-      inset 0px 0px 0px rgba(255, 255, 255, 0.5),
-      3px 3px 6px rgba(163, 177, 198, 0.7),
-      9px 9px 25px rgb(163, 177, 198, 0.5),
-      -9px -9px 16px white;
-    transition: all 0.7s;
-  }
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 16.8rem;
+  margin: 3rem auto;
 
   @keyframes cardAnimation {
     from {
@@ -71,45 +53,112 @@ const Container = styled.div`
       margin-top: 0px;
     }
   }
+
+  &:hover {
+    box-shadow:
+      12px 12px 22px rgb(163, 177, 198, 0.8),
+      -9px -9px 16px rgba(255, 255, 255, 0.65);
+  }
+`;
+
+// const BlurredImage = styled.div`
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-size: contain;
+//   background-repeat: no-repeat;
+//   background-position: top center;
+//   filter: blur(8px);
+//   transform: scale(1.1) translateZ(0);
+//   will-change: transform;
+//   z-index: 1;
+
+//   ${({ src }) => src && css`
+//     background-image: url(${src});
+//   `};
+// `;
+
+const ImageWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 `;
 
 const Image = styled.img`
-  width: 100%;
-  height: auto;
   object-fit: cover;
-  border-radius: 4px;
-  margin-bottom: 0.6rem;
-  box-shadow:
-    5px 5px 15px rgba(0, 0, 0, 0.28),
-    -3px -3px 15px #ffffff;
+  left:0;
+  position: absolute;
+  width: 24.5rem;
+  height: 18.5rem;
+  filter: saturate(105%);
+`;
+
+const Overlay = styled.div`
+  z-index: 999;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(230, 241, 252, 0.99) 31%,
+    #e6f1fc 40%
+  );
+  
+`;
+
+const InfoBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem;
+  position: absolute;
+  bottom: 6.6rem;
+  left: 30%;
+  right: 0;
 `;
 
 const Name = styled(Text)`
   color: #1b2944;
   font-weight: 800;
-  font-size: 1.5rem;
-  text-shadow:
-    5px 5px 9px rgba(163, 177, 198, 0.45),
-    -3px -3px 15px #ffffff;
+  font-size: 2rem;
+  text-shadow: 0 3px 12px rgba(27, 42, 68, 0.5),
+  -3px -3px 15px #ffffff;
+`;
+
+const Position = styled(Text)`
+  text-shadow: 0 3px 12px rgba(255, 156, 0, 0.45);
+  font-weight: bold;
+  color: #ff9a00;
+  font-size: 0.98rem;
 `;
 
 const Quote = styled(Text)`
   color: #354461;
-  font-size: 1rem;
-  text-shadow:
-    5px 5px 9px rgba(163, 177, 198, 0.35),
-    -3px -3px 15px #ffffff;
-  line-height: 1.2;
-  margin-top: 0.5rem;
+  font-size: 0.98rem;
+  text-shadow: 0 3px 12px rgba(27, 42, 68, 0.5);
+  line-height: 1.25;
+  min-height: 36px;
+  word-break: keep-all;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.2rem;
 `;
 
-const Award = styled(Text)`
-  color: #354461;
-  font-size: 1rem;
-  font-weight: 600;
-  text-shadow:
-    5px 5px 9px rgba(163, 177, 198, 0.35),
-    -3px -3px 15px #ffffff;
-  line-height: 1.25;
-  margin-top: 1.5rem;
+const Major = styled(Text)`
+  color: #1c2a2e;
+  font-weight: bold;
+  text-shadow: 0 3px 12px rgba(27, 42, 68, 0.5);
+  margin-top: 0.25rem;
+  font-size: 0.98rem;
 `;
