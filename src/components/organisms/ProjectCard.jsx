@@ -146,7 +146,7 @@ const Overlay = styled.div`
   @media screen and (max-width: 750px){
   background-image: linear-gradient(
     to bottom,
-    rgba(255, 255, 255, 0.7) 0%,
+    rgba(255, 255, 255, 0.5) 0%,
 
     #e6f1fc 40%
   );
