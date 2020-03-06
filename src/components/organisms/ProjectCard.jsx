@@ -70,6 +70,15 @@ const Container = styled.div`
       12px 12px 22px rgb(163, 177, 198, 0.8),
       -9px -9px 16px rgba(255, 255, 255, 0.65);
   }
+
+  @media screen and (max-width: 900px){
+  height: 17.8rem;
+  }
+
+  @media screen and (max-width: 750px){
+  height: 25.8rem;
+  }
+
 `;
 
 // const BlurredImage = styled.div`
@@ -109,6 +118,12 @@ const Image = styled.img`
   width: 24.5rem;
   height: 18.5rem;
   filter: saturate(105%);
+
+  @media screen and (max-width: 750px){
+    height:22rem;
+    width:auto;
+  }
+
 `;
 
 const Overlay = styled.div`
@@ -127,6 +142,16 @@ const Overlay = styled.div`
     #e6f1fc 40%
   );
   
+
+  @media screen and (max-width: 750px){
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.7) 0%,
+
+    #e6f1fc 40%
+  );
+  }
+
 `;
 
 const InfoBox = styled.div`
@@ -138,6 +163,11 @@ const InfoBox = styled.div`
   bottom: 0;
   left: 32%;
   right: 0;
+
+  @media screen and (max-width: 750px){
+  left:0;
+  top:25%;
+  }
 `;
 
 const Name = styled(Text)`
@@ -167,6 +197,11 @@ const Position = styled(Text)`
   font-size: 0.98rem;
   position: absolute;
   bottom:15%;
+  margin-right:1rem;
+
+  @media screen and (max-width: 900px){
+    bottom:10%;
+  }
 `;
 
 const Quote = styled(Text)`
