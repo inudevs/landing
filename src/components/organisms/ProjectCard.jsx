@@ -4,7 +4,7 @@ import Text from '../atoms/Text';
 
 const MemberCard = ({
   image, name, quote,
-  award, major,
+  award, date
 }) => (
     <Container>
       <ImageWrapper>
@@ -12,14 +12,25 @@ const MemberCard = ({
       </ImageWrapper>
       <Overlay>
         <InfoBox>
-          <Name>{name}</Name>
-          <Position>{award}</Position>
+          <Name>
+            {name}
+            <Date>{date}</Date>
+          </Name>
+
           <Quote>
             {quote.split('\n').map((line, idx) => (
               <span key={`line-${idx}`}>{line}</span>
             ))}
           </Quote>
-          <Major>{major}</Major>
+          <Position>
+            {
+              award
+                ? <span role="img" aria-label="trophy">&#x1F3C6;</span>
+                : <span>&nbsp;</span>
+            }
+            {' '}
+            {award}
+          </Position>
         </InfoBox>
       </Overlay>
     </Container>
@@ -28,7 +39,7 @@ const MemberCard = ({
 export default MemberCard;
 
 const Container = styled.div`
-  animation: cardAnimation 1.8s;
+  animation: cardAimation 1.8s;
   width: fit-content;
   display: flex;
   flex-direction: column;
@@ -43,14 +54,14 @@ const Container = styled.div`
   height: 16.8rem;
   margin: 3rem auto;
 
-  @keyframes cardAnimation {
+  @keyframes cardAimation {
     from {
       opacity: 0%;
-      margin-top: 15px;
+      margin-top: 4rem;
     }
     to {
       opacity: 100%;
-      margin-top: 0px;
+      margin-top: 3rem;
     }
   }
 
@@ -123,16 +134,29 @@ const InfoBox = styled.div`
   flex-direction: column;
   padding: 1.2rem;
   position: absolute;
-  bottom: 6.6rem;
-  left: 30%;
+  top:5%;
+  bottom: 0;
+  left: 32%;
   right: 0;
 `;
 
 const Name = styled(Text)`
   color: #1b2944;
-  font-weight: 800;
+  font-weight: 900;
   font-size: 2rem;
   text-shadow: 0 3px 12px rgba(27, 42, 68, 0.5),
+  -3px -3px 15px #ffffff;
+  /* font-family: 'Noto Sans KR', sans-serif; */
+`;
+
+
+const Date = styled.div`
+color: #1B2A4445;
+display:inline-block;
+font-size:1rem;
+margin-left:0.6rem;
+vertical-align:middle;
+text-shadow: 0 3px 6px rgba(27, 42, 68, 0.2),
   -3px -3px 15px #ffffff;
 `;
 
@@ -141,24 +165,19 @@ const Position = styled(Text)`
   font-weight: bold;
   color: #ff9a00;
   font-size: 0.98rem;
+  position: absolute;
+  bottom:15%;
 `;
 
 const Quote = styled(Text)`
   color: #354461;
   font-size: 0.98rem;
   text-shadow: 0 3px 12px rgba(27, 42, 68, 0.5);
-  line-height: 1.25;
+  line-height: 1.5;
   min-height: 36px;
   word-break: keep-all;
   display: flex;
   flex-direction: column;
-  margin-top: 0.2rem;
+  margin-top: 1rem;
 `;
 
-const Major = styled(Text)`
-  color: #1c2a2e;
-  font-weight: bold;
-  text-shadow: 0 3px 12px rgba(27, 42, 68, 0.5);
-  margin-top: 0.25rem;
-  font-size: 0.98rem;
-`;
