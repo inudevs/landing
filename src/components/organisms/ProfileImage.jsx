@@ -4,18 +4,32 @@ import styled from 'styled-components';
 import Image from '../atoms/Image';
 
 import profileImage from '../../assets/profile.png';
+import ProfileSlider from '../molecules/ProfileSlider';
 
 const ProfileImage = () => (
-  <FadeIn>
-    <ProfileBorder>
-      <Profile
-        src={profileImage}
-      />
-    </ProfileBorder>
-  </FadeIn>
+  <Wrapper>
+    <AnimatedProfileSlider />
+    <FadeIn>
+      <ProfileBorder>
+        <Profile
+          src={profileImage}
+        />
+      </ProfileBorder>
+    </FadeIn>
+  </Wrapper>
 );
 
 export default ProfileImage;
+
+const Wrapper = styled.div`
+  position: relative;
+`;
+
+const AnimatedProfileSlider = styled(ProfileSlider)`
+  position: absolute;
+  top: 0;
+  left: 0;
+`;
 
 const ProfileBorder = styled.div`
   width: 15rem;

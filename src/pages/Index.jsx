@@ -6,9 +6,8 @@ import Link from '../components/atoms/Link';
 import Page from '../components/atoms/Page';
 import Text from '../components/atoms/Text';
 import LayeredText from '../components/molecules/LayeredText';
-import ProfileImage from '../components/molecules/ProfileImage';
-import ProfileSlider from '../components/molecules/ProfileSlider';
 import SocialBar from '../components/molecules/SocialBar';
+import ProfileImage from '../components/organisms/ProfileImage';
 import PageSection from '../components/organisms/PageSection';
 import MemberList from '../components/templates/MemberList';
 import ProjectList from '../components/templates/ProjectList';
@@ -18,7 +17,6 @@ const Index = () => (
     <SocialBar />
     <Container>
       <ProfileImage />
-      <ProfileSlider />
       <TextSection>
         <Title>
           inudevs
