@@ -4,43 +4,41 @@ import Text from '../atoms/Text';
 
 const MemberCard = ({
   image, name, quote,
-  award, date
+  award, date,
 }) => (
-    <Container>
-      <ImageWrapper>
-        <Image src={image} />
-      </ImageWrapper>
-      <Overlay>
-        <InfoBox>
-          <Name>
-            {name}
-            <Date>{date}</Date>
-          </Name>
-
-          <Quote>
-            {quote.split('\n').map((line, idx) => (
-              <span key={`line-${idx}`}>{line}</span>
-            ))}
-          </Quote>
-          <Position>
-            {
-              award
-                ? <span role="img" aria-label="trophy">&#x1F3C6;</span>
-                : <span>&nbsp;</span>
-            }
-            {' '}
-            {award}
-          </Position>
-        </InfoBox>
-      </Overlay>
-    </Container>
-  );
+  <Container>
+    <ImageWrapper>
+      <Image src={image} />
+    </ImageWrapper>
+    <Overlay>
+      <InfoBox>
+        <Name>
+          {name}
+          <Date>{date}</Date>
+        </Name>
+        <Quote>
+          {quote.split('\n').map((line, idx) => (
+            <span key={`line-${idx}`}>{line}</span>
+          ))}
+        </Quote>
+        <Position>
+          {
+            award
+              ? <span role="img" aria-label="trophy">&#x1F3C6;</span>
+              : <span>&nbsp;</span>
+          }
+          {' '}
+          {award}
+        </Position>
+      </InfoBox>
+    </Overlay>
+  </Container>
+);
 
 export default MemberCard;
 
 const Container = styled.div`
   animation: cardAimation 1.8s;
-  width: fit-content;
   display: flex;
   flex-direction: column;
   box-shadow:
@@ -71,36 +69,14 @@ const Container = styled.div`
       -9px -9px 16px rgba(255, 255, 255, 0.65);
   }
 
-  @media screen and (max-width: 900px){
-  height: 17.8rem;
+  @media screen and (max-width: 900px) {
+    height: 17.8rem;
   }
 
-  @media screen and (max-width: 750px){
-  height: 25.8rem;
+  @media screen and (max-width: 750px) {
+    height: 25.8rem;
   }
-
 `;
-
-// const BlurredImage = styled.div`
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   left: 0;
-//   right: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-size: contain;
-//   background-repeat: no-repeat;
-//   background-position: top center;
-//   filter: blur(8px);
-//   transform: scale(1.1) translateZ(0);
-//   will-change: transform;
-//   z-index: 1;
-
-//   ${({ src }) => src && css`
-//     background-image: url(${src});
-//   `};
-// `;
 
 const ImageWrapper = styled.div`
   position: absolute;
@@ -113,17 +89,16 @@ const ImageWrapper = styled.div`
 
 const Image = styled.img`
   object-fit: cover;
-  left:0;
+  left: 0;
   position: absolute;
   width: 24.5rem;
   height: 18.5rem;
   filter: saturate(105%);
 
-  @media screen and (max-width: 750px){
-    height:22rem;
-    width:auto;
+  @media screen and (max-width: 750px) {
+    height: 22rem;
+    width: auto;
   }
-
 `;
 
 const Overlay = styled.div`
@@ -141,17 +116,15 @@ const Overlay = styled.div`
     rgba(230, 241, 252, 0.99) 31%,
     #e6f1fc 40%
   );
-  
 
-  @media screen and (max-width: 750px){
-  background-image: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.5) 0%,
+  @media screen and (max-width: 750px) {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5) 0%,
 
-    #e6f1fc 40%
-  );
+      #e6f1fc 40%
+    );
   }
-
 `;
 
 const InfoBox = styled.div`
@@ -159,14 +132,14 @@ const InfoBox = styled.div`
   flex-direction: column;
   padding: 1.2rem;
   position: absolute;
-  top:5%;
+  top: 5%;
   bottom: 0;
   left: 32%;
   right: 0;
 
-  @media screen and (max-width: 750px){
-  left:0;
-  top:25%;
+  @media screen and (max-width: 750px) {
+    left: 0;
+    top: 25%;
   }
 `;
 
@@ -175,19 +148,17 @@ const Name = styled(Text)`
   font-weight: 900;
   font-size: 2rem;
   text-shadow: 0 3px 12px rgba(27, 42, 68, 0.5),
-  -3px -3px 15px #ffffff;
-  /* font-family: 'Noto Sans KR', sans-serif; */
+    -3px -3px 15px #ffffff;
 `;
 
-
 const Date = styled.div`
-color: #1B2A4445;
-display:inline-block;
-font-size:1rem;
-margin-left:0.6rem;
-vertical-align:middle;
-text-shadow: 0 3px 6px rgba(27, 42, 68, 0.2),
-  -3px -3px 15px #ffffff;
+  color: #1B2A4445;
+  display: inline-block;
+  font-size: 1rem;
+  margin-left: 0.6rem;
+  vertical-align: middle;
+  text-shadow: 0 3px 6px rgba(27, 42, 68, 0.2),
+    -3px -3px 15px #ffffff;
 `;
 
 const Position = styled(Text)`
@@ -196,11 +167,11 @@ const Position = styled(Text)`
   color: #ff9a00;
   font-size: 0.98rem;
   position: absolute;
-  bottom:15%;
-  margin-right:1rem;
+  bottom: 15%;
+  margin-right: 1rem;
 
-  @media screen and (max-width: 900px){
-    bottom:10%;
+  @media screen and (max-width: 900px) {
+    bottom: 10%;
   }
 `;
 
@@ -215,4 +186,3 @@ const Quote = styled(Text)`
   flex-direction: column;
   margin-top: 1rem;
 `;
-

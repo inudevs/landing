@@ -15,5 +15,6 @@ module.exports = {
     'color-named': null,
     'color-hex-case': null,
     'rule-empty-line-before': null,
-  }
-}
+    'function-parentheses-space-inside': null,
+  },
+};

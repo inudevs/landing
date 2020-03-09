@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import Text from '../atoms/Text';
 
 const MemberCard = ({
@@ -29,7 +30,6 @@ export default MemberCard;
 
 const Container = styled.div`
   animation: cardAnimation 1.8s;
-  width: fit-content;
   display: flex;
   flex-direction: column;
   box-shadow:
@@ -60,27 +60,6 @@ const Container = styled.div`
       -9px -9px 16px rgba(255, 255, 255, 0.65);
   }
 `;
-
-// const BlurredImage = styled.div`
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   left: 0;
-//   right: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-size: contain;
-//   background-repeat: no-repeat;
-//   background-position: top center;
-//   filter: blur(8px);
-//   transform: scale(1.1) translateZ(0);
-//   will-change: transform;
-//   z-index: 1;
-
-//   ${({ src }) => src && css`
-//     background-image: url(${src});
-//   `};
-// `;
 
 const ImageWrapper = styled.div`
   position: absolute;
@@ -130,7 +109,7 @@ const Name = styled(Text)`
   font-weight: 800;
   font-size: 1.5rem;
   text-shadow: 0 3px 12px rgba(27, 42, 68, 0.5),
-  -3px -3px 15px #ffffff;
+    -3px -3px 15px #ffffff;
 `;
 
 const Position = styled(Text)`
