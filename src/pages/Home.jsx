@@ -8,6 +8,7 @@ import BookCard from '../components/organisms/BookCard';
 import storyIllust from '../assets/illusts/story.png';
 import membersIllust from '../assets/illusts/members.png';
 import projectsIllust from '../assets/illusts/projects.png';
+import contentsIllust from '../assets/illusts/contents.png';
 
 const books = [
   {
@@ -30,6 +31,13 @@ const books = [
     description: '세상에 펼쳐진 아이디어',
     image: projectsIllust,
     route: '/projects',
+    shadowColor: 'rgba(62, 49, 138, 0.5)',
+  },
+  {
+    title: 'contents',
+    description: '컨텐츠, 지식의 공유',
+    image: contentsIllust,
+    route: '/contents',
     shadowColor: 'rgba(62, 49, 138, 0.5)',
   },
 ];
@@ -55,7 +63,7 @@ export default HomePage;
 const BookShelf = styled.div`
   width: 95%;
   display: grid;
-  grid-column-gap: 1rem;
+  grid-column-gap: 0;
   grid-row-gap: 3rem;
-  grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(318px, 1fr));
 `;
