@@ -1,14 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
+
+import Page from '../components/atoms/Page';
+import Header from '../components/templates/Header';
 
 const ProjectsPage = () => {
   return (
-    <Container>
-    </Container>
+    <Page>
+      <Header />
+    </Page>
   );
 };
 
 export default ProjectsPage;
-
-const Container = styled.div`
-`;
