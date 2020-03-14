@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Page from '../components/atoms/Page';
-import Header from '../components/templates/Header';
 import BookCard from '../components/organisms/BookCard';
+import Header from '../components/templates/Header';
 
 import storyIllust from '../assets/illusts/story.png';
 import membersIllust from '../assets/illusts/members.png';

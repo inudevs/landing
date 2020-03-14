@@ -106,7 +106,7 @@ const InfoBox = styled.div`
 
 const Name = styled(Text)`
   color: #1b2944;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 1.5rem;
   text-shadow: 0 3px 12px rgba(27, 42, 68, 0.5),
     -3px -3px 15px #ffffff;

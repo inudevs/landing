@@ -16,6 +16,6 @@ const PageSection = ({ title, children }) => (
 export default PageSection;
 
 const SectionTitle = styled(LayeredText)`
-  font-weight: 800;
+  font-weight: 700;
   font-size: 1.5rem;
 `;
