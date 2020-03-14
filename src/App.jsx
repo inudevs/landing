@@ -1,13 +1,13 @@
 import React from 'react';
 
 import Global from './components/atoms/Global';
-import Index from './pages/Index';
+import Router from './client/Router';
 
 function App() {
   return (
     <>
       <Global />
-      <Index />
+      <Router />
     </>
   );
 }

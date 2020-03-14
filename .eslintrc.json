@@ -19,6 +19,7 @@
     "import"
   ],
   "rules": {
+    "arrow-body-style": "off",
     "global-require": "off",
     "import/no-dynamic-require": "off",
     "no-console": "off",
@@ -37,6 +38,7 @@
     ],
     "react/jsx-props-no-spreading": "off",
     "react/no-array-index-key": "off",
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    "react/self-closing-comp": "off"
   }
 }
