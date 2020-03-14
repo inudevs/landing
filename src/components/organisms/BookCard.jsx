@@ -10,6 +10,7 @@ const BookCard = ({
   image, title, description,
   shadowColor, route,
   history,
+  isVertical = false,
 }) => {
   const onClickCard = () => history.push(route);
 
@@ -18,18 +19,21 @@ const BookCard = ({
       <Container
         onClick={onClickCard}
       >
-        <CoverImage
-          src={image}
-          shadowColor={shadowColor}
-        />
-        <Title
-          shadowColor={shadowColor}
-        >
-          {title}
-        </Title>
-        <Description>
-          {description}
-        </Description>
+        <Content>
+          <CoverImage
+            src={image}
+            shadowColor={shadowColor}
+            isVertical={isVertical}
+          />
+          <Title
+            shadowColor={shadowColor}
+          >
+            {title}
+          </Title>
+          <Description>
+            {description}
+          </Description>
+        </Content>
       </Container>
     </Wrapper>
   );
@@ -45,10 +49,12 @@ const Wrapper = styled.div`
 `;
 
 const Container = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 256px;
+  height: 320px;
   border-radius: 16px;
   background-color: rgb(224, 229, 236);
   box-shadow:
@@ -58,8 +64,21 @@ const Container = styled.div`
   cursor: pointer;
 `;
 
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 1rem;
+`;
+
 const CoverImage = styled(Image)`
   width: 312px;
+
+  ${({ isVertical }) => isVertical && css`
+    height: 256px;
+    width: unset;
+  `};
 
   ${({ shadowColor }) => shadowColor && css`
     filter:
@@ -77,6 +96,7 @@ const Title = styled(Text)`
   font-size: 1.35rem;
   font-weight: bold;
   text-transform: uppercase;
+  margin-top: 0.5rem;
 
   ${({ shadowColor }) => shadowColor && css`
     text-shadow: 3px 3px 35px ${shadowColor};
