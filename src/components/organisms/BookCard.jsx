@@ -62,6 +62,13 @@ const Container = styled.div`
     rgba(255, 255, 255, 0.5) -9px -9px 16px;
   padding: 1rem 0;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(163, 177, 198, 0.6) 7px 7px 14px, rgba(255, 255, 255, 0.5) -7px -7px 14px;
+    background: linear-gradient(to left top, rgb(213, 219, 224), rgb(240, 245, 253));
+  }
 `;
 
 const Content = styled.div`
