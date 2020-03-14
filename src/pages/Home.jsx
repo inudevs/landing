@@ -7,6 +7,7 @@ import BookCard from '../components/organisms/BookCard';
 
 import storyIllust from '../assets/illusts/story.png';
 import membersIllust from '../assets/illusts/members.png';
+import projectsIllust from '../assets/illusts/projects.png';
 
 const books = [
   {
@@ -23,6 +24,13 @@ const books = [
     route: '/members',
     shadowColor: 'rgba(255, 97, 104, 0.5)',
     isVertical: true,
+  },
+  {
+    title: 'projects',
+    description: '세상에 펼쳐진 아이디어',
+    image: projectsIllust,
+    route: '/projects',
+    shadowColor: 'rgba(62, 49, 138, 0.5)',
   },
 ];
 
