@@ -4,13 +4,12 @@ import styled from 'styled-components';
 import MemberCard from '../organisms/MemberCard';
 
 import members from '../../data/members.json';
-
-const sortedMembers = members.sort((a, b) => a - b);
+// const sortedMembers = members.sort((a, b) => a - b);
 
 const MemberList = () => (
   <>
     <ListContainer>
-      {sortedMembers.map(({ name, ...props }, idx) => (
+      {members.map(({ name, ...props }, idx) => (
         <MemberCard
           key={`member-${idx}`}
           image={require(`../../assets/members/${name}.png`)}
