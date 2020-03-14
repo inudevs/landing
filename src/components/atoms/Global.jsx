@@ -17,6 +17,10 @@ const Global = createGlobalStyle`
   input:focus {
     outline: none;
   }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export default Global;
