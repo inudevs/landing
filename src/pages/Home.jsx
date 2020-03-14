@@ -3,9 +3,10 @@ import styled from 'styled-components';
 
 import Page from '../components/atoms/Page';
 import Header from '../components/templates/Header';
+import BookCard from '../components/organisms/BookCard';
 
 import storyIllust from '../assets/illusts/story.png';
-import BookCard from '../components/organisms/BookCard';
+import membersIllust from '../assets/illusts/members.png';
 
 const books = [
   {
@@ -13,24 +14,14 @@ const books = [
     description: '이누를 소개합니다',
     image: storyIllust,
     route: '/story',
+    shadowColor: 'rgba(66, 92, 255, 0.5)',
   },
   {
     title: 'members',
     description: '이누를 소개합니다',
-    image: storyIllust,
-    route: '/story',
-  },
-  {
-    title: 'contents',
-    description: '이누를 소개합니다',
-    image: storyIllust,
-    route: '/story',
-  },
-  {
-    title: 'projects',
-    description: '이누를 소개합니다',
-    image: storyIllust,
-    route: '/story',
+    image: membersIllust,
+    route: '/members',
+    shadowColor: 'rgba(255, 97, 104, 0.5)',
   },
 ];
 

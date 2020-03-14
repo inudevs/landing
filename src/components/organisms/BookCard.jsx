@@ -1,13 +1,15 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import Text from '../atoms/Text';
 import Image from '../atoms/Image';
 import LayeredText from '../molecules/LayeredText';
 
 const BookCard = ({
-  image, title, description, route, history,
+  image, title, description,
+  shadowColor, route,
+  history,
 }) => {
   const onClickCard = () => history.push(route);
 
@@ -18,8 +20,11 @@ const BookCard = ({
       >
         <CoverImage
           src={image}
+          shadowColor={shadowColor}
         />
-        <Title>
+        <Title
+          shadowColor={shadowColor}
+        >
           {title}
         </Title>
         <Description>
@@ -55,19 +60,27 @@ const Container = styled.div`
 
 const CoverImage = styled(Image)`
   width: 312px;
-  filter:
-    drop-shadow(-9px -9px 16px rgba(255, 255, 255, 0.3))
-    drop-shadow(9px 9px 16px rgba(66, 92, 255, 0.5));
-  -webkit-filter:
-    drop-shadow(-9px -9px 16px rgba(255, 255, 255, 0.3))
-    drop-shadow(9px 9px 16px rgba(66, 92, 255, 0.5));
+
+  ${({ shadowColor }) => shadowColor && css`
+    filter:
+      saturate(110%)
+      drop-shadow(-9px -9px 16px rgba(255, 255, 255, 0.3))
+      drop-shadow(9px 9px 16px ${shadowColor});
+    -webkit-filter:
+      saturate(110%)
+      drop-shadow(-9px -9px 16px rgba(255, 255, 255, 0.3))
+      drop-shadow(9px 9px 16px ${shadowColor});
+  `};
 `;
 
 const Title = styled(Text)`
   font-size: 1.35rem;
   font-weight: bold;
   text-transform: uppercase;
-  text-shadow: 9px 9px 16px rgba(66, 92, 255, 0.5);
+
+  ${({ shadowColor }) => shadowColor && css`
+    text-shadow: 3px 3px 35px ${shadowColor};
+  `}
 `;
 
 const Description = styled(LayeredText)`
