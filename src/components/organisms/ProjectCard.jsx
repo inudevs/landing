@@ -38,7 +38,7 @@ const MemberCard = ({
 export default MemberCard;
 
 const Container = styled.div`
-  animation: cardAimation 1.8s;
+  animation: cardAnimation 1.8s;
   display: flex;
   flex-direction: column;
   box-shadow:
@@ -52,7 +52,7 @@ const Container = styled.div`
   height: 16.8rem;
   margin: 3rem auto;
 
-  @keyframes cardAimation {
+  @keyframes cardAnimation {
     from {
       opacity: 0%;
       margin-top: 4rem;
