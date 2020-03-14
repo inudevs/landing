@@ -4,9 +4,10 @@ const Page = styled.main`
   background-color: #E0E5EC;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   padding: 8rem 0;
+  min-height: 100vh;
 `;
 
 export default Page;
