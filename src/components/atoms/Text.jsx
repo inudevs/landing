@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 
 const Text = styled.span`
-  font-family:
-    'Poppins', 'Noto Sans KR',
-    -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.47;
   color: rgba(0, 0, 0, 0.95);
   user-select: none;

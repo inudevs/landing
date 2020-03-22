@@ -52,6 +52,7 @@ const Line = styled.div`
 const BrandWrapper = styled.div`
   position: relative;
   height: 320px;
+  width: 320px;
 `;
 
 const BrandText = styled(Text)`
