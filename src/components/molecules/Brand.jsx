@@ -56,7 +56,7 @@ const BrandWrapper = styled.div`
 
 const BrandText = styled(Text)`
   color: #000457;
-  /* word-break: keep-all; */
+  width: max-content;
   letter-spacing: -0.5px;
   font-weight: 900;
   font-size: 78px;
