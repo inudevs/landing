@@ -1,14 +1,16 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import Page from '../components/atoms/Page';
 import Header from '../components/templates/Header';
 import Brand from '../components/molecules/Brand';
 import LayeredText from '../components/molecules/LayeredText';
+import Image from '../components/atoms/Image';
 
 import drawArrows from '../assets/illusts/draw-arrows.png';
+import drawCloud from '../assets/illusts/draw-cloud.png';
+import drawFlask from '../assets/illusts/draw-flask.png';
 import drawYellowUnderline from '../assets/illusts/draw-yellow-underline.png';
-import Image from '../components/atoms/Image';
 
 const StoryPage = () => {
   return (
@@ -19,10 +21,19 @@ const StoryPage = () => {
           <ProfileImage
             src="https://scontent-ssn1-1.xx.fbcdn.net/v/t1.0-9/88205483_639446300148891_496202815861948416_o.jpg?_nc_cat=107&_nc_sid=85a577&_nc_ohc=2U1Ozz-zg_oAX9QPqw3&_nc_ht=scontent-ssn1-1.xx&oh=34aaeeeba9cd6b5df2a606e031109af8&oe=5E9CD6B5"
           />
-          <Paragraph>
+          <Title>
+            아이디어로 실험하기
+          </Title>
+          <SubTitle centered>
             동아리원들의 아이디어를 현실로 이루는 실험.<br />
             한국디지털미디어고등학교 <strong>아이디어 실험 동아리, 이누</strong>.
-          </Paragraph>
+            <FlaskIllust
+              src={drawFlask}
+            />
+            <CloudIllust
+              src={drawCloud}
+            />
+          </SubTitle>
         </CenterContainer>
       </Section>
       <Section>
@@ -117,6 +128,11 @@ const Title = styled(LayeredText)`
 const SubTitle = styled(LayeredText)`
   font-size: 1.35rem;
   z-index: 999;
+  position: relative;
+
+  ${({ centered }) => centered && css`
+    text-align: center;
+  `};
 `;
 
 const RelativeSpan = styled.span`
@@ -137,4 +153,22 @@ const UnderlineImage = styled(Image)`
   left: 0;
   right: 0;
   position: absolute;
+`;
+
+const FlaskIllust = styled(Image)`
+  height: 128px;
+  width: auto;
+  right: -85px;
+  top: -150px;
+  position: absolute;
+  transform: rotate(22deg);
+`;
+
+const CloudIllust = styled(Image)`
+  width: 128px;
+  height: auto;
+  left: -40px;
+  top: -150px;
+  position: absolute;
+  transform: rotate(-20deg);
 `;
