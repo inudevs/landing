@@ -39,6 +39,7 @@
     "react/jsx-props-no-spreading": "off",
     "react/no-array-index-key": "off",
     "react/prop-types": "off",
-    "react/self-closing-comp": "off"
+    "react/self-closing-comp": "off",
+    "react/jsx-one-expression-per-line": "off"
   }
 }
