@@ -61,9 +61,15 @@ const HomePage = () => {
 export default HomePage;
 
 const BookShelf = styled.div`
-  width: 95%;
-  display: grid;
-  grid-column-gap: 0;
-  grid-row-gap: 3rem;
-  grid-template-columns: repeat(auto-fill, minmax(318px, 1fr));
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+
+  @media screen and (max-width: 1440px) {
+    width: 95%;
+    display: grid;
+    grid-column-gap: 0;
+    grid-row-gap: 3rem;
+    grid-template-columns: repeat(auto-fill, minmax(318px, 1fr));
+  }
 `;
