@@ -38,11 +38,24 @@ const StoryPage = () => {
       </Section>
       <Section>
         <LeftContent>
+          <Title>그럴 때 있잖아요.</Title>
+          <SubTitle>
+            갑자기 머릿속에 아이디어가 떠올랐을 때!
+          </SubTitle>
+          <Paragraph>
+            평소 느꼈던 자신 또는 타인의 불편함을 해결하기 위한 방법이나,<br />
+            다른 사람들이 관심을 가지고 흥미로울 만한 컨텐츠,<br />
+            아니면 그냥 한 번쯤은 이뤄 보고 싶은 목표.<br />
+          </Paragraph>
+        </LeftContent>
+      </Section>
+      <Section>
+        <LeftContent>
           <Title>
             당신에게 빠져드는 방법.
           </Title>
           <SubTitle>
-            사람들을 컨텐츠에 집중하게 하는 방법,<br />
+            사람들이 컨텐츠에 집중하게 하는 방법,<br />
             사람들을{' '}
             <RelativeSpan>
               이누의 브랜드
@@ -63,7 +76,7 @@ const StoryPage = () => {
         </BrandWrapper>
       </Section>
       <Section>
-        <Paragraph>
+        <Paragraph centered>
           작고 사소해 보이는 아이디어라도, <strong>열정</strong>만 있다면 현실로 만들 수 있습니다.<br />
           일상 속에서 영감을 받아 함께 아이디어를 생각하고, 발전시킵니다.<br />
           현실로 이루는 방법? 어렵지 않아요. 출발은 미미하지만 조금씩 성장해 가면 되죠.<br />
@@ -115,8 +128,12 @@ const BrandWrapper = styled.div`
 
 const Paragraph = styled(LayeredText)`
   font-size: 1.2rem;
-  text-align: center;
   z-index: 999;
+  margin-top: 1.2rem;
+
+  ${({ centered }) => centered && css`
+    text-align: center;
+  `};
 `;
 
 const Title = styled(LayeredText)`
