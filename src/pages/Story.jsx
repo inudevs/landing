@@ -93,9 +93,14 @@ const Section = styled.section`
   margin: 0 auto;
   align-items: center;
   padding: 5rem 0;
+  justify-content: center;
 
   @media screen and (max-width: 1440px) {
     width: 95%;
+  }
+
+  @media (max-width: 738px) {
+    flex-direction: column;
   }
 `;
 
@@ -120,6 +125,7 @@ const ProfileImage = styled(Image)`
 
 const BrandWrapper = styled.div`
   padding: 0 3rem;
+  padding-right: 0;
   display: flex;
   align-items: center;
   justify-content: center;

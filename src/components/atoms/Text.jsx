@@ -5,6 +5,7 @@ const Text = styled.span`
   color: rgba(0, 0, 0, 0.95);
   user-select: none;
   text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
+  word-break: keep-all;
 `;
 
 export default Text;
