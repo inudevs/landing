@@ -7,6 +7,8 @@ import Members from '../pages/Members';
 import Projects from '../pages/Projects';
 import Contents from '../pages/Contents';
 
+import ScrollToTop from '../components/ScrollToTop';
+
 const Router = () => {
   return (
     <BrowserRouter>

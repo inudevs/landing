@@ -6,7 +6,7 @@ import Router from './client/Router';
 import Global from './components/atoms/Global';
 import Footer from './components/molecules/Footer';
 import Text from './components/atoms/Text';
-// import LayeredText from './components/molecules/LayeredText';
+import LayeredText from './components/molecules/LayeredText';
 
 function App() {
   return (
