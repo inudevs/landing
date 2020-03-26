@@ -14,15 +14,15 @@ function App() {
       <Global />
       <Container>
         {/* 작업할 때는 아래 부분을 주석하고 작업하세요. */}
-        <Cover>
+        {/* <Cover>
           <Tape>LANDING AT<br />2020-03-26</Tape>
-          <Desc>
+          <Desc>git 
             많은 기대 부탁드립니다.
           </Desc>
           <Bottom>
             @inudevs
           </Bottom>
-        </Cover>
+        </Cover> */}
 
         <Router />
         <Footer />

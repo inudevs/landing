@@ -34,6 +34,7 @@ const Container = styled.div`
   height: 14rem;
   margin: 0 auto;
 
+
   @keyframes cardAnimation {
     from {
       opacity: 0%;
@@ -45,12 +46,20 @@ const Container = styled.div`
     }
   }
 
+  @media screen and (max-width: 600px){
+    width: 20rem;
+    height: 20rem;
+  }
+
   &:hover {
     box-shadow:
       12px 12px 22px rgb(163, 177, 198, 0.8),
       -9px -9px 16px rgba(255, 255, 255, 0.65);
     transform: scale(1.05);
   }
+
+  
+
 `;
 
 const ImageWrapper = styled.div`
@@ -67,6 +76,11 @@ const Image = styled.img`
   width: 14rem;
   height: 14rem;
   filter: saturate(105%);
+
+    @media screen and (max-width: 600px){
+    width: 20rem;
+    height: 20rem;
+  }
 `;
 
 // const Overlay = styled.div`
