@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
 
 import Home from '../pages/Home';
 import Story from '../pages/Story';
@@ -19,6 +19,7 @@ const Router = () => {
         <Route exact path="/members" component={Members} />
         <Route exact path="/projects" component={Projects} />
         <Route exact path="/contents" component={Contents} />}
+        <Redirect from="*" to="/" />
       </Switch>
     </BrowserRouter>
   );
