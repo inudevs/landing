@@ -4,48 +4,71 @@
     "quote": "불가능없는프론트엔드를 만들어요",
     "position": "동아리장 / 치킨 마스터",
     "major": "18기 해킹방어과",
-    "shadow": "#4E7BFF"
+    "color": "linear-gradient(to bottom right, #4E7BFF, #4170fa)",
+    "shadow": "9px 9px 16px rgba(78, 123, 255, 0.35), -9px -9px 16px rgba(78, 123, 255, 0.5)",
+    "icon": "fas fa-skull-crossbones"
   },
   {
     "name": "우상윤",
     "quote": "해방이지만 디자인이 좋은걸요",
     "position": "부동아리장 / 해방 디자이너",
-    "major": "18기 해킹방어과"
+    "major": "18기 해킹방어과",
+    "color": "linear-gradient(to bottom right, #8550FF, #7033FF)",
+    "shadow": "9px 9px 16px rgba(133, 80, 255, 0.35), -9px -9px 16px rgba(133, 80, 255, 0.5)",
+    "icon": "fas fa-eye-dropper"
   },
   {
     "name": "강정민",
     "quote": "안녕하세요 달콤한 닭강정입니다",
     "position": "위트 있는 역할",
-    "major": "18기 웹프로그래밍과"
+    "color": "linear-gradient(to bottom right, rgb(52,218,217), #2FA8C3)",
+    "shadow": "9px 9px 16px rgba(52,218,217, 0.35), -9px -9px 16px rgba(52,218,217, 0.5)",
+    "major": "18기 웹프로그래밍과",
+    "icon": "fas fa-bolt"
   },
   {
     "name": "권순재",
     "quote": "자기소개",
     "position": "위트 있는 역할",
-    "major": "18기 웹프로그래밍과"
+    "color": "linear-gradient(to bottom right, #F18A68, #EB6C62)",
+    "shadow": "9px 9px 16px rgba(241, 138, 104, 0.35), -9px -9px 16px rgba(241, 138, 104, 0.5)",
+    "major": "18기 웹프로그래밍과",
+    "icon": "fas fa-hands-helping"
   },
   {
     "name": "김예준",
     "quote": "이누 흥해라!!!",
     "position": "위트 있는 역할",
-    "major": "18기 해킹방어과"
+    "color": "linear-gradient(to bottom right, #87DEF0, #5976E3)",
+    "shadow": "9px 9px 16px rgba(89, 118, 227, 0.35), -9px -9px 16px rgba(89, 118, 227, 0.5)",
+    "major": "18기 해킹방어과",
+    "icon": "fas fa-server"
   },
   {
     "name": "백은서",
     "quote": "자기소개",
     "position": "위트 있는 역할",
-    "major": "18기 웹프로그래밍과"
+    "color": "linear-gradient(to bottom right, #FBDE54, #FCAB6E)",
+    "shadow": "9px 9px 16px rgba(251, 222, 84, 0.35), -9px -9px 16px rgba(251, 222, 84, 0.5)",
+    "major": "18기 웹프로그래밍과",
+    "icon": "fas fa-project-diagram"
   },
   {
     "name": "전다예",
-    "quote": "안녕하세요 전 전다예입니다.",
     "position": "위트 있는 역할",
-    "major": "18기 해킹방어과"
+    "quote": "안녕하세요 전 전다예입니다.",
+    "color": "linear-gradient(to bottom right, #FF808B, #FF5F71)",
+    "shadow": "9px 9px 16px rgba(255, 128, 139, 0.35), -9px -9px 16px rgba(255, 128, 139, 0.5)",
+    "major": "18기 해킹방어과",
+    "icon": "fas fa-brush"
   },
   {
     "name": "천예준",
     "quote": "자기소개",
     "position": "위트 있는 역할",
-    "major": "18기 웹프로그래밍과"
+    "color": "linear-gradient(to bottom right, #42CD7D, #13D090)",
+    "shadow": "9px 9px 16px rgba(66, 205, 125, 0.35), -9px -9px 16px rgba(66, 205, 125, 0.5)",
+    "major": "18기 웹프로그래밍과",
+    "icon": "fas fa-microchip"
   }
 ]

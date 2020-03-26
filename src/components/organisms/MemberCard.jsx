@@ -5,14 +5,18 @@ import Text from '../atoms/Text';
 
 const MemberCard = ({
   image, name, quote,
-  position, major,
+  position, major, icon,
+  color, shadow,
 }) => (
   <Container>
     <Image
       src={image}
     >
-      <IconWrap>
-        <Icon className="fas fa-skull-crossbones" />
+      <IconWrap
+        color={color}
+        shadow={shadow}
+      >
+        <Icon className={icon} />
       </IconWrap>
     </Image>
     <InfoBox>
@@ -71,12 +75,17 @@ const Image = styled.div`
   height: 156px;
   border-radius: 48px;
   filter: saturate(105%);
-  /* box-shadow: inset 16px 16px 32px #bec7ca, inset -16px -16px 32px #ffffff; */
+  cursor: pointer;
   box-shadow: inset 3px 3px 32px -1px rgba(84,88,89,0.5), inset -16px -16px 32px rgba(114,118,121,0.1);
+  transition: 0.35s;
 
   ${({ src }) => src && css`
     background-image: url(${src});
   `};
+
+  &:hover {
+    box-shadow: inset 3px 3px 32px -1px rgba(84,88,89,0.3), inset -16px -16px 32px rgba(114,118,121,0.09);
+  }
 `;
 
 const IconWrap = styled.div`
@@ -89,10 +98,14 @@ const IconWrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to bottom right, #4E7BFF, #4170fa);
-  box-shadow:
-    9px 9px 16px rgb(78, 123, 255, 0.35),
-    -9px -9px 16px rgba(78, 123, 255, 0.5);
+
+  ${({ color }) => color && css`
+    background: ${color};
+  `};
+
+  ${({ shadow }) => shadow && css`
+    box-shadow: ${shadow};
+  `};
 `;
 
 const Icon = styled.i`
@@ -118,7 +131,7 @@ const Name = styled(Text)`
 `;
 
 const Position = styled(Text)`
-  text-shadow: 0 3px 12px rgba(255, 156, 0, 0.45);
+  text-shadow: 0 1px 12px rgba(245, 136, 0, 0.8);
   font-weight: bold;
   color: #ff9a00;
   font-size: 0.98rem;
