@@ -57,7 +57,6 @@ const HomePage = () => {
     </Page>
   );
 };
-
 export default HomePage;
 
 const BookShelf = styled.div`

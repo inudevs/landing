@@ -6,13 +6,14 @@ import Router from './client/Router';
 import Global from './components/atoms/Global';
 import Footer from './components/molecules/Footer';
 import Text from './components/atoms/Text';
-import LayeredText from './components/molecules/LayeredText';
+// import LayeredText from './components/molecules/LayeredText';
 
 function App() {
   return (
     <>
       <Global />
       <Container>
+        {/* 작업할 때는 아래 부분을 주석 해제하고 작업하세요. */}
         <Cover>
           <Tape>LANDING AT<br />2020-03-26</Tape>
           <Desc>
@@ -22,6 +23,7 @@ function App() {
             @inudevs
           </Bottom>
         </Cover>
+
         <Router />
         <Footer />
       </Container>
