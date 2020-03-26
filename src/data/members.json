@@ -51,7 +51,7 @@
     "color": "linear-gradient(to bottom right, #FBDE54, #FCAB6E)",
     "shadow": "9px 9px 16px rgba(251, 222, 84, 0.35), -9px -9px 16px rgba(251, 222, 84, 0.5)",
     "major": "18기 웹프로그래밍과",
-    "icon": "fas fa-project-diagram"
+    "icon": "fas fa-dog"
   },
   {
     "name": "전다예",
@@ -60,7 +60,7 @@
     "color": "linear-gradient(to bottom right, #FF808B, #FF5F71)",
     "shadow": "9px 9px 16px rgba(255, 128, 139, 0.35), -9px -9px 16px rgba(255, 128, 139, 0.5)",
     "major": "18기 해킹방어과",
-    "icon": "fas fa-brush"
+    "icon": "fas fa-laugh-wink"
   },
   {
     "name": "천예준",
