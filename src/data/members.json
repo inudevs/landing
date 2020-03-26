@@ -46,8 +46,8 @@
   },
   {
     "name": "백은서",
-    "quote": "자기소개",
-    "position": "위트 있는 역할",
+    "position": "몽실언니",
+    "quote": "많은 걸 하고꙼̈ 있는 백은서 입니다",
     "color": "linear-gradient(to bottom right, #FBDE54, #FCAB6E)",
     "shadow": "9px 9px 16px rgba(251, 222, 84, 0.35), -9px -9px 16px rgba(251, 222, 84, 0.5)",
     "major": "18기 웹프로그래밍과",
@@ -64,8 +64,8 @@
   },
   {
     "name": "천예준",
-    "position": "기획자 선생님",
-    "quote": "자기소개",
+    "position": "아이디어 기획자",
+    "quote": "디미고에서 별거 다해보고 싶은 학생입니당",
     "color": "linear-gradient(to bottom right, #42CD7D, #13D090)",
     "shadow": "9px 9px 16px rgba(66, 205, 125, 0.35), -9px -9px 16px rgba(66, 205, 125, 0.5)",
     "major": "18기 웹프로그래밍과",
