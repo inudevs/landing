@@ -13,7 +13,7 @@ function App() {
     <>
       <Global />
       <Container>
-        {/* 작업할 때는 아래 부분을 주석 해제하고 작업하세요. */}
+        {/* 작업할 때는 아래 부분을 주석하고 작업하세요. */}
         <Cover>
           <Tape>LANDING AT<br />2020-03-26</Tape>
           <Desc>

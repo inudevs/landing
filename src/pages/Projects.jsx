@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Home from '../pages/Home';
 
@@ -14,11 +13,11 @@ const ProjectsPage = () => {
       <Header />
       <PageSection
         title="이누가 지금까지 세상에 펼친 아이디어들이에요."
+        route='/story'
       >
-        <Route exact path="/" component={Home} />>
-          <ProjectList />
+        <ProjectList />
       </PageSection>
-    </Page>
+    </Page >
   );
 };
 
