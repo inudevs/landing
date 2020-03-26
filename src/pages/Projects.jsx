@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Home from '../pages/Home';
-
 import Page from '../components/atoms/Page';
 import PageSection from '../components/organisms/PageSection';
 import Header from '../components/templates/Header';
@@ -17,7 +15,7 @@ const ProjectsPage = () => {
       >
         <ProjectList />
       </PageSection>
-    </Page >
+    </Page>
   );
 };
 
