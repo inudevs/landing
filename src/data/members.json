@@ -42,7 +42,7 @@
     "color": "linear-gradient(to bottom right, #87DEF0, #5976E3)",
     "shadow": "9px 9px 16px rgba(89, 118, 227, 0.35), -9px -9px 16px rgba(89, 118, 227, 0.5)",
     "major": "18기 해킹방어과",
-    "icon": "fas fa-server"
+    "icon": "fas fa-fire-alt"
   },
   {
     "name": "백은서",
