@@ -12,6 +12,7 @@ import ScrollToTop from '../components/ScrollToTop';
 const Router = () => {
   return (
     <BrowserRouter basename="/">
+      <ScrollToTop />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/story" component={Story} />
