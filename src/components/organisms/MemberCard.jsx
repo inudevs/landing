@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import Text from '../atoms/Text';
 
@@ -8,21 +8,23 @@ const MemberCard = ({
   position, major,
 }) => (
   <Container>
-    <ImageWrapper>
-      <Image src={image} />
-    </ImageWrapper>
-    <Overlay>
-      <InfoBox>
-        <Name>{name}</Name>
-        <Position>{position}</Position>
-        <Quote>
-          {quote.split('\n').map((line, idx) => (
-            <span key={`line-${idx}`}>{line}</span>
-          ))}
-        </Quote>
-        <Major>{major}</Major>
-      </InfoBox>
-    </Overlay>
+    <Image
+      src={image}
+    >
+      <IconWrap>
+        <Icon className="fas fa-skull-crossbones" />
+      </IconWrap>
+    </Image>
+    <InfoBox>
+      <Name>{name}</Name>
+      <Position>{position}</Position>
+      <Quote>
+        {quote.split('\n').map((line, idx) => (
+          <span key={`line-${idx}`}>{line}</span>
+        ))}
+      </Quote>
+      <Major>{major}</Major>
+    </InfoBox>
   </Container>
 );
 
@@ -35,13 +37,14 @@ const Container = styled.div`
   box-shadow:
     9px 9px 16px rgb(163, 177, 198, 0.6),
     -9px -9px 16px rgba(255, 255, 255, 0.3);
-  border-radius: 12px;
+  border-radius: 48px;
   transition: all 0.7s;
   overflow: hidden;
   position: relative;
   width: 16rem;
   height: 21.8rem;
   margin: 0 auto;
+  padding: 1.28rem;
 
   @keyframes cardAnimation {
     from {
@@ -61,43 +64,46 @@ const Container = styled.div`
   }
 `;
 
-const ImageWrapper = styled.div`
-  position: absolute;
-  top: 0;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-`;
-
-const Image = styled.img`
-  object-fit: cover;
-  width: 17.5rem;
-  height: 18.5rem;
+const Image = styled.div`
+  position: relative;
+  background-size: cover;
+  width: 156px;
+  height: 156px;
+  border-radius: 48px;
   filter: saturate(105%);
+  /* box-shadow: inset 16px 16px 32px #bec7ca, inset -16px -16px 32px #ffffff; */
+  box-shadow: inset 3px 3px 32px -1px rgba(84,88,89,0.5), inset -16px -16px 32px rgba(114,118,121,0.1);
+
+  ${({ src }) => src && css`
+    background-image: url(${src});
+  `};
 `;
 
-const Overlay = styled.div`
-  z-index: 999;
+const IconWrap = styled.div`
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0) 40%,
-    rgba(232, 243, 253, 0.95) 66%,
-    #e8f3fd 70%
-  );
+  bottom: -15px;
+  right: -15px;
+  border-radius: 25px;
+  height: 62px;
+  width: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #4E7BFF, #4170fa);
+  box-shadow:
+    9px 9px 16px rgb(78, 123, 255, 0.35),
+    -9px -9px 16px rgba(78, 123, 255, 0.5);
+`;
+
+const Icon = styled.i`
+  font-size: 25px;
+  color: white;
 `;
 
 const InfoBox = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 1.2rem;
+  padding: 2rem;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -106,10 +112,9 @@ const InfoBox = styled.div`
 
 const Name = styled(Text)`
   color: #1b2944;
-  font-weight: 700;
+  font-weight: 900;
   font-size: 1.5rem;
-  text-shadow: 0 3px 12px rgba(27, 42, 68, 0.5),
-    -3px -3px 15px #ffffff;
+  text-shadow: 0 3px 12px rgba(27, 42, 68, 0.5) -3px -3px 15px #ffffff;
 `;
 
 const Position = styled(Text)`
@@ -122,7 +127,7 @@ const Position = styled(Text)`
 const Quote = styled(Text)`
   color: #354461;
   font-size: 0.98rem;
-  text-shadow: 0 3px 12px rgba(27, 42, 68, 0.5);
+  text-shadow: 0 3px 12px rgba(27, 42, 68, 0.5) -3px -3px 15px #ffffff;
   line-height: 1.25;
   min-height: 36px;
   word-break: keep-all;
@@ -134,7 +139,7 @@ const Quote = styled(Text)`
 const Major = styled(Text)`
   color: #1c2a2e;
   font-weight: bold;
-  text-shadow: 0 3px 12px rgba(27, 42, 68, 0.5);
+  text-shadow: 0 3px 12px rgba(27, 42, 68, 0.5) -3px -3px 15px #ffffff;
   margin-top: 0.25rem;
   font-size: 0.98rem;
 `;
