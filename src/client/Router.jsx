@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Redirect, Switch } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 import Home from '../pages/Home';
 import Story from '../pages/Story';
@@ -11,7 +12,7 @@ import ScrollToTop from '../components/ScrollToTop';
 
 const Router = () => {
   return (
-    <BrowserRouter basename="/">
+    <HashRouter>
       <ScrollToTop />
       <Switch>
         <Route exact path="/" component={Home} />
@@ -19,8 +20,9 @@ const Router = () => {
         <Route exact path="/members" component={Members} />
         <Route exact path="/projects" component={Projects} />
         <Route exact path="/contents" component={Contents} />}
+        <Redirect from="*" to="/" />
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
