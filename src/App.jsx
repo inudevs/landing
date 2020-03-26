@@ -15,7 +15,7 @@ function App() {
       <Container>
         {/* <Cover>
           <Tape>LANDING AT<br />2020-03-26</Tape>
-          <Desc>
+          <Desc>git 
             많은 기대 부탁드립니다.
           </Desc>
           <Bottom>
