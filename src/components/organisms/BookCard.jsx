@@ -68,6 +68,7 @@ const Container = styled.div`
     transform: scale(1.05);
     box-shadow: rgba(163, 177, 198, 0.6) 7px 7px 14px, rgba(255, 255, 255, 0.5) -7px -7px 14px;
     background: linear-gradient(to left top, rgb(213, 219, 224), rgb(240, 245, 253));
+    transition: 0.6s all;
   }
 `;
 

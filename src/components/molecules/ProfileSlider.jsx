@@ -1,8 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { CircleSlider } from 'react-circle-slider';
 import styled from 'styled-components';
+import { withRouter } from 'react-router-dom';
 
-const ProfileSlider = ({ className = '' }) => {
+const ProfileSlider = ({ className = '', history, route = '/' }) => {
   const [value, setValue] = useState(0);
   const [isStart, setIsStart] = useState(0);
   const [isEnd, setIsEnd] = useState(0);
@@ -49,9 +50,13 @@ const ProfileSlider = ({ className = '' }) => {
     [isStart, animate, getSliderSpeed],
   );
 
+  const onClickToHome = () => history.push(route);
+
+
   return (
     <Logoslider
       className={className}
+      onClick={onClickToHome}
     >
       {
         isEnd === 0
@@ -82,15 +87,18 @@ const ProfileSlider = ({ className = '' }) => {
             </FadeOut>
           )
       }
-    </Logoslider>
+    </Logoslider >
   );
 };
 
 const Logoslider = styled.div`
   filter: saturate(105%);
-
+  z-index: 1;
   svg {
     padding: 0 !important;
+  }
+  &:hover{
+    cursor:pointer;
   }
 `;
 
@@ -108,4 +116,4 @@ const FadeOut = styled.div`
   }
 `;
 
-export default ProfileSlider;
+export default withRouter(ProfileSlider);

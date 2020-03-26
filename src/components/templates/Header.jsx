@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 
 import HorizontalRule from '../atoms/HorizontalRule';
@@ -8,44 +9,51 @@ import LayeredText from '../molecules/LayeredText';
 import SocialBar from '../molecules/SocialBar';
 import ProfileImage from '../organisms/ProfileImage';
 
-const Header = () => (
-  <Wrapper>
-    <SocialBar />
-    <Container>
-      <ProfileImage />
-      <TextSection>
-        <Title>
-          inudevs
-        </Title>
-        <StatusBar>
-          <StatusText>
-            게시물 0
-          </StatusText>
-          <StatusText>
-            팔로워 ∞
-          </StatusText>
-          <StatusText>
-            팔로우 ∞
-          </StatusText>
-        </StatusBar>
-        <Info>
-          <Name>
-            이누
-          </Name>
-          <Description>
-            뭉뭉~ 안뇽 난 이누 !!
-          </Description>
-          <Link
-            href="https://facebook.com/inudevs"
+const Header = () => {
+  const history = useHistory();
+  const onClickMoveToHome = () => history.push('/');
+
+  return (
+    <Wrapper>
+      <SocialBar />
+      <Container>
+        <ProfileImage />
+        <TextSection>
+          <Title
+            onClick={onClickMoveToHome}
           >
-            fb.com/inudevs
-          </Link>
-        </Info>
-      </TextSection>
-    </Container>
-    <HorizontalRule />
-  </Wrapper>
-);
+            inudevs
+          </Title>
+          <StatusBar>
+            <StatusText>
+              게시물 0
+            </StatusText>
+            <StatusText>
+              팔로워 ∞
+            </StatusText>
+            <StatusText>
+              팔로우 ∞
+            </StatusText>
+          </StatusBar>
+          <Info>
+            <Name>
+              이누
+            </Name>
+            <Description>
+              뭉뭉~ 안뇽 난 이누 !!
+            </Description>
+            <Link
+              href="https://facebook.com/inudevs"
+            >
+              fb.com/inudevs
+            </Link>
+          </Info>
+        </TextSection>
+      </Container>
+      <HorizontalRule />
+    </Wrapper>
+  );
+}
 
 export default Header;
 
@@ -74,6 +82,13 @@ const TextSection = styled.div`
 const Title = styled(LayeredText)`
   font-weight: bold;
   font-size: 3.4rem;
+  cursor: pointer;
+
+  &:hover {
+    text-shadow:
+      5px 5px 13px rgba(0, 0, 0, 0.35),
+      -3px -3px 13px #ffffff;
+  }
 `;
 
 const StatusBar = styled.div`
