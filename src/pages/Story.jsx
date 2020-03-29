@@ -184,7 +184,7 @@ const Section = styled.section`
   justify-content: center;
 
   @media screen and (max-width: 1440px) {
-    width: 95%;
+    width: 90%;
   }
 
   @media (max-width: 738px) {
@@ -196,6 +196,7 @@ const CenterContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 `;
 
 const LeftContent = styled.div`
@@ -225,6 +226,10 @@ const Paragraph = styled(LayeredText)`
   z-index: 999;
   margin-top: 1.2rem;
 
+  @media (max-width: 500px) {
+    font-size: 1rem;
+  }
+
   ${({ centered }) => centered && css`
     text-align: center;
   `};
@@ -234,12 +239,20 @@ const Title = styled(LayeredText)`
   font-size: 2.2rem;
   font-weight: 900;
   z-index: 999;
+
+  @media (max-width: 500px) {
+    font-size: 2.1rem;
+  }
 `;
 
 const SubTitle = styled(LayeredText)`
   font-size: 1.35rem;
   z-index: 999;
   position: relative;
+
+  @media (max-width: 500px) {
+    font-size: 1.2rem;
+  }
 
   ${({ centered }) => centered && css`
     text-align: center;

@@ -8,6 +8,7 @@ const Page = styled.main`
   align-items: center;
   padding: 8rem 0;
   min-height: 100vh;
+  overflow-x: hidden;
 `;
 
 export default Page;
