@@ -58,10 +58,10 @@
     "name": "박정한",
     "position": "포지션",
     "quote": "설명",
-    "color": "linear-gradient(to bottom right, #42CD7D, #13D090)",
-    "shadow": "9px 9px 16px rgba(66, 205, 125, 0.35), -9px -9px 16px rgba(66, 205, 125, 0.5)",
+    "color": "linear-gradient(to bottom right, #12aC3D, #93D090)",
+    "shadow": "9px 9px 16px rgba(61, 225, 25, 0.35), -9px -9px 16px rgba(16, 245, 125, 0.5)",
     "major": "19기 웹프로그래밍과",
-    "icon": "fas fa-microchip"
+    "icon": "fab fa-pagelines"
   },
   {
     "name": "이수호",
