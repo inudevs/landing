@@ -2,20 +2,21 @@
   {
     "name": "강혁진",
     "position": "포지션",
-    "quote": "설명",
-    "color": "linear-gradient(to bottom right, #42CD7D, #13D090)",
-    "shadow": "9px 9px 16px rgba(66, 205, 125, 0.35), -9px -9px 16px rgba(66, 205, 125, 0.5)",
+    "quote": "밥워임니다",
+    "color": "linear-gradient(to bottom right, #FFD500, #FFAA00)",
+    "shadow": "9px 9px 16px rgba(255, 204, 0, 0.35), -9px -9px 16px rgba(250, 204, 110, 0.5)",
     "major": "19기 웹프로그래밍과",
-    "icon": "fas fa-microchip"
+    "icon": "",
+    "img": "croissant"
   },
   {
     "name": "김세령",
     "position": "포지션",
     "quote": "설명",
-    "color": "linear-gradient(to bottom right, #42CD7D, #13D090)",
-    "shadow": "9px 9px 16px rgba(66, 205, 125, 0.35), -9px -9px 16px rgba(66, 205, 125, 0.5)",
+    "color": "linear-gradient(to bottom right, #7E7BE7, #6563FF)",
+    "shadow": "9px 9px 16px rgba(102, 102, 255, 0.35), -9px -9px 16px rgba(153, 153, 255, 0.5)",
     "major": "19기 웹프로그래밍과",
-    "icon": "fas fa-microchip"
+    "icon": "fas fa-chess-queen"
   },
   {
     "name": "김슬호",
@@ -75,10 +76,10 @@
     "name": "이승민",
     "position": "포지션",
     "quote": "설명",
-    "color": "linear-gradient(to bottom right, #42CD7D, #13D090)",
-    "shadow": "9px 9px 16px rgba(66, 205, 125, 0.35), -9px -9px 16px rgba(66, 205, 125, 0.5)",
+    "color": "linear-gradient(to bottom right, #606060, #303030)",
+    "shadow": "9px 9px 16px rgba(110, 110, 110, 0.35), -9px -9px 16px rgba(70, 70, 70, 0.5)",
     "major": "19기 웹프로그래밍과",
-    "icon": "fas fa-microchip"
+    "icon": "fab fa-apple"
   },
   {
     "name": "조원진",
@@ -118,7 +119,7 @@
   },
   {
     "name": "우상윤",
-    "quote": "해방이지만\n디자인이 좋은걸요",
+    "quote": "이 사람을 보게 된다면\n일하라고 욕해주세요",
     "position": "부동아리장 / 해방 디자이너",
     "major": "18기 해킹방어과",
     "color": "linear-gradient(to bottom right, #8550FF, #7033FF)",

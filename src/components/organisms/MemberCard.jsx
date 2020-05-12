@@ -6,31 +6,38 @@ import Text from '../atoms/Text';
 const MemberCard = ({
   image, name, quote,
   position, major, icon,
-  color, shadow,
+  color, shadow, img,
 }) => (
-  <Container>
-    <Image
-      src={image}
-    >
-      <IconWrap
-        color={color}
-        shadow={shadow}
+    <Container>
+      <Image
+        src={image}
       >
-        <Icon className={icon} />
-      </IconWrap>
-    </Image>
-    <InfoBox>
-      <Name>{name}</Name>
-      <Position>{position}</Position>
-      <Quote>
-        {quote.split('\n').map((line, idx) => (
-          <span key={`line-${idx}`}>{line}</span>
-        ))}
-      </Quote>
-      <Major>{major}</Major>
-    </InfoBox>
-  </Container>
-);
+        <IconWrap
+          color={color}
+          shadow={shadow}
+        >
+          {
+            icon
+              ?
+              <Icon className={icon} />
+              :
+              <img src={require(`../../assets/etc/${img}.png`)} />
+
+          }
+        </IconWrap>
+      </Image>
+      <InfoBox>
+        <Name>{name}</Name>
+        <Position>{position}</Position>
+        <Quote>
+          {quote.split('\n').map((line, idx) => (
+            <span key={`line-${idx}`}>{line}</span>
+          ))}
+        </Quote>
+        <Major>{major}</Major>
+      </InfoBox>
+    </Container>
+  );
 
 export default MemberCard;
 
