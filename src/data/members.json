@@ -70,5 +70,113 @@
     "shadow": "9px 9px 16px rgba(66, 205, 125, 0.35), -9px -9px 16px rgba(66, 205, 125, 0.5)",
     "major": "18기 웹프로그래밍과",
     "icon": "fas fa-microchip"
+  },
+  {
+    "name": "강혁진",
+    "position": "포지션",
+    "quote": "설명",
+    "color": "linear-gradient(to bottom right, #42CD7D, #13D090)",
+    "shadow": "9px 9px 16px rgba(66, 205, 125, 0.35), -9px -9px 16px rgba(66, 205, 125, 0.5)",
+    "major": "19기 웹프로그래밍과",
+    "icon": "fas fa-microchip"
+  },
+  {
+    "name": "김세령",
+    "position": "포지션",
+    "quote": "설명",
+    "color": "linear-gradient(to bottom right, #42CD7D, #13D090)",
+    "shadow": "9px 9px 16px rgba(66, 205, 125, 0.35), -9px -9px 16px rgba(66, 205, 125, 0.5)",
+    "major": "19기 웹프로그래밍과",
+    "icon": "fas fa-microchip"
+  },
+  {
+    "name": "김슬호",
+    "position": "포지션",
+    "quote": "설명",
+    "color": "linear-gradient(to bottom right, #42CD7D, #13D090)",
+    "shadow": "9px 9px 16px rgba(66, 205, 125, 0.35), -9px -9px 16px rgba(66, 205, 125, 0.5)",
+    "major": "19기 웹프로그래밍과",
+    "icon": "fas fa-microchip"
+  },
+  {
+    "name": "김한울",
+    "position": "포지션",
+    "quote": "설명",
+    "color": "linear-gradient(to bottom right, #42CD7D, #13D090)",
+    "shadow": "9px 9px 16px rgba(66, 205, 125, 0.35), -9px -9px 16px rgba(66, 205, 125, 0.5)",
+    "major": "19기 이비즈니스과",
+    "icon": "fas fa-microchip"
+  },
+  {
+    "name": "남정우",
+    "position": "포지션",
+    "quote": "설명",
+    "color": "linear-gradient(to bottom right, #42CD7D, #13D090)",
+    "shadow": "9px 9px 16px rgba(66, 205, 125, 0.35), -9px -9px 16px rgba(66, 205, 125, 0.5)",
+    "major": "19기 웹프로그래밍과",
+    "icon": "fas fa-microchip"
+  },
+  {
+    "name": "민유",
+    "position": "포지션",
+    "quote": "설명",
+    "color": "linear-gradient(to bottom right, #42CD7D, #13D090)",
+    "shadow": "9px 9px 16px rgba(66, 205, 125, 0.35), -9px -9px 16px rgba(66, 205, 125, 0.5)",
+    "major": "19기 웹프로그래밍과",
+    "icon": "fas fa-microchip"
+  },
+  {
+    "name": "박정한",
+    "position": "포지션",
+    "quote": "설명",
+    "color": "linear-gradient(to bottom right, #42CD7D, #13D090)",
+    "shadow": "9px 9px 16px rgba(66, 205, 125, 0.35), -9px -9px 16px rgba(66, 205, 125, 0.5)",
+    "major": "19기 웹프로그래밍과",
+    "icon": "fas fa-microchip"
+  },
+  {
+    "name": "이수호",
+    "position": "포지션",
+    "quote": "설명",
+    "color": "linear-gradient(to bottom right, #42CD7D, #13D090)",
+    "shadow": "9px 9px 16px rgba(66, 205, 125, 0.35), -9px -9px 16px rgba(66, 205, 125, 0.5)",
+    "major": "19기 해킹방어과",
+    "icon": "fas fa-microchip"
+  },
+  {
+    "name": "이승민",
+    "position": "포지션",
+    "quote": "설명",
+    "color": "linear-gradient(to bottom right, #42CD7D, #13D090)",
+    "shadow": "9px 9px 16px rgba(66, 205, 125, 0.35), -9px -9px 16px rgba(66, 205, 125, 0.5)",
+    "major": "19기 웹프로그래밍과",
+    "icon": "fas fa-microchip"
+  },
+  {
+    "name": "조원진",
+    "position": "포지션",
+    "quote": "설명",
+    "color": "linear-gradient(to bottom right, #42CD7D, #13D090)",
+    "shadow": "9px 9px 16px rgba(66, 205, 125, 0.35), -9px -9px 16px rgba(66, 205, 125, 0.5)",
+    "major": "19기 웹프로그래밍과",
+    "icon": "fas fa-microchip"
+  },
+  {
+    "name": "한우영",
+    "position": "포지션",
+    "quote": "설명",
+    "color": "linear-gradient(to bottom right, #42CD7D, #13D090)",
+    "shadow": "9px 9px 16px rgba(66, 205, 125, 0.35), -9px -9px 16px rgba(66, 205, 125, 0.5)",
+    "major": "19기 웹프로그래밍과",
+    "icon": "fas fa-microchip"
+  },
+  {
+    "name": "황인상",
+    "position": "포지션",
+    "quote": "설명",
+    "color": "linear-gradient(to bottom right, #42CD7D, #13D090)",
+    "shadow": "9px 9px 16px rgba(66, 205, 125, 0.35), -9px -9px 16px rgba(66, 205, 125, 0.5)",
+    "major": "19기 해킹방어과",
+    "icon": "fas fa-microchip"
   }
 ]
